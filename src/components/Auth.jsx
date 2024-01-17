@@ -5,6 +5,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { auth, googleProvider } from "../config/firebase";
@@ -13,32 +14,53 @@ export const AuthSignup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  let navigate = useNavigate();
+
   console.log(auth?.currentUser?.photoURL);
 
-  const signUp = async () => {
-    try {
-      toast("Signup Clicked!");
-      await createUserWithEmailAndPassword(auth, email, password);
-    } catch (error) {
-      console.error(error);
-    }
+  const signUp = (e) => {
+    e.preventDefault();
+    // toast("Signup Clicked!");
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        console.log(response);
+        sessionStorage.setItem(
+          "Auth Token",
+          response._tokenResponse.refreshToken
+        );
+        navigate("/");
+      })
+      .catch((error) => {
+        if (error.code === "auth/email-already-in-use") {
+          toast.error("Email Already in Use");
+        }
+      });
   };
 
-  const googleSignIn = async () => {
-    try {
-      await signInWithPopup(auth, googleProvider);
-    } catch (error) {
-      console.error(error);
-    }
+  const googleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((response) => {
+        console.log(response);
+        sessionStorage.setItem(
+          "Auth Token",
+          response._tokenResponse.refreshToken
+        );
+        sessionStorage.setItem("Name", response._tokenResponse.displayName);
+        sessionStorage.setItem("picture", response._tokenResponse.photoUrl);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  const logout = async () => {
-    try {
-      await signOut(auth);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const logout = async () => {
+  //   try {
+  //     await signOut(auth);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <div className="relative flex flex-col min-h-screen overflow-hidden">
@@ -135,21 +157,43 @@ export const AuthLogin = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const googleSignIn = async () => {
-    try {
-      await signInWithPopup(auth, googleProvider);
-    } catch (error) {
-      console.error(error);
-    }
+  let navigate = useNavigate();
+
+  const googleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((response) => {
+        console.log(response);
+        sessionStorage.setItem(
+          "Auth Token",
+          response._tokenResponse.refreshToken
+        );
+        sessionStorage.setItem("Name", response._tokenResponse.displayName);
+        sessionStorage.setItem("picture", response._tokenResponse.photoUrl);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  const login = async () => {
-    try {
-      toast("Signup Clicked!");
-      await signInWithEmailAndPassword(auth, email, password);
-    } catch (error) {
-      console.error(error);
-    }
+  const login = () => {
+    // toast("Signup Clicked!");
+    signInWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        sessionStorage.setItem(
+          "Auth Token",
+          response._tokenResponse.refreshToken
+        );
+        navigate("/");
+      })
+      .catch((error) => {
+        if (error.code === "auth/wrong-password") {
+          toast.error("Please check the Password");
+        }
+        if (error.code === "auth/user-not-found") {
+          toast.error("Please check the Email");
+        }
+      });
   };
 
   return (

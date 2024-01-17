@@ -1,7 +1,16 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/profile");
+  };
+
+  let picture = sessionStorage.getItem("picture");
 
   return (
     <nav className="w-full bg-black shadow">
@@ -68,10 +77,10 @@ export const Navbar = () => {
                 <a href="#about">About Us</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="#humanAnatomy">Heart Anatomy</a>
+                <a href="#heartAnatomy">Heart Anatomy</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="#humanPhysiology">Heart Physiology</a>
+                <a href="#heartPhysiology">Heart Physiology</a>
               </li>
               <li className="text-white hover:text-indigo-200">
                 <a href="#interactiveLabs">Interactive Labs</a>
@@ -85,21 +94,35 @@ export const Navbar = () => {
             </ul>
 
             <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-              <button className="w-10 h-10 rounded-full border-2 border-purple-800 bg-white mt-4">
-                <img
-                  src="https://res.cloudinary.com/ddbtxfsfk/image/upload/v1677178789/user-image-with-black-background_oslni5.png"
-                  className="w-10 h-10 -top-1 relative"
-                />
+              <button
+                onClick={handleNavigate}
+                className="w-10 h-10 rounded-full border-2 border-purple-800 bg-white mt-4"
+              >
+                {picture ? (
+                  <img src={picture} className="w-10 h-10  rounded-full" />
+                ) : (
+                  <img
+                    src="https://res.cloudinary.com/ddbtxfsfk/image/upload/v1677178789/user-image-with-black-background_oslni5.png"
+                    className="w-10 h-10 -top-1 relative"
+                  />
+                )}
               </button>
             </div>
           </div>
         </div>
         <div className="hidden space-x-2 md:inline-block">
-          <button className="w-10 h-10 rounded-full border-2 border-purple-800 bg-white">
-            <img
-              src="https://res.cloudinary.com/ddbtxfsfk/image/upload/v1677178789/user-image-with-black-background_oslni5.png"
-              className="w-10 h-10 -top-1 relative"
-            />
+          <button
+            onClick={handleNavigate}
+            className="w-10 h-10 rounded-full border-2 border-purple-800 bg-white"
+          >
+            {picture ? (
+              <img src={picture} className="w-10 h-10  rounded-full" />
+            ) : (
+              <img
+                src="https://res.cloudinary.com/ddbtxfsfk/image/upload/v1677178789/user-image-with-black-background_oslni5.png"
+                className="w-10 h-10 -top-1 relative"
+              />
+            )}
           </button>
         </div>
       </div>
