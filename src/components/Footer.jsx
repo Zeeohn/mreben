@@ -28,7 +28,7 @@ function Footer() {
                   </span>
                 </h2>
               </a>
-              <p className="text-[15px] font-medium text-[#646464]">
+              <p className="text-[15px] font-medium text-justify text-[#646464]">
                 Embark on your journey to master human heart anatomy and
                 physiology. Start exploring the wonders of the cardiovascular
                 system with{" "}

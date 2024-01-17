@@ -10,7 +10,7 @@ export const Hero = ({ content, category, title, url, videoSrc, left }) => {
         <h2 className="mb-8 text-4xl font-extrabold tracking-tight text-gray-900  xl:text-6xl">
           {title}
         </h2>
-        <p className="mb-6 text-xl font-medium leading-8 text-gray-500 xl:text-2xl xl:leading-10">
+        <p className="mb-6 text-xl font-medium text-justify leading-8 text-gray-500 xl:text-2xl xl:leading-10">
           {content}
         </p>
         <a

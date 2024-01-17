@@ -43,7 +43,7 @@ export const Home = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-500 mb-4">
               About Us
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 mb-8">
+            <p className="text-lg md:text-xl text-justify text-gray-700 mb-8">
               <strong>
                 <em>BeeNCardiac: Heart Anatomy and Physiology</em>
               </strong>{" "}
@@ -69,7 +69,7 @@ export const Home = () => {
           <h1 className="font-bold text-3xl text-left nt-5 mb-4">
             Human Heart
           </h1>
-          <p className="text-left">
+          <p className="text-justify">
             The heart is encased in a resilient, dual-layered membranous
             structure known as the pericardium, the heart benefits from a
             fluid-filled space, minimizing friction during its rhythmic pumping
@@ -84,7 +84,7 @@ export const Home = () => {
           <h2 className="font-bold my-4 text-2xl text-left">
             Human Heart Anatomy and Physiology
           </h2>
-          <p className="text-left">
+          <p className="text-justify">
             Human heart anatomy and physiology collectively elucidate the
             intricate orchestration of structure and function within the
             cardiovascular system. Anatomy delves into the detailed exploration
@@ -101,7 +101,7 @@ export const Home = () => {
           <h3 className="text-left text-xl font-bold my-4">
             Human Heart Anatomy: <em>A Pinnacle of Biological complexity</em>{" "}
           </h3>
-          <p className="text-left">
+          <p className="text-justify">
             Human heart anatomy refers to the detailed study and understanding
             of the structure, organization, and components of the human heart,
             including its chambers, valves, blood vessels, and the intricate
@@ -114,7 +114,7 @@ export const Home = () => {
               className="rounded-lg shadow-lg"
             />
           </div>
-          <ol className="list-decimal  text-left mt-4">
+          <ol className="list-decimal  text-justify mt-4">
             <li>
               <strong>Structural Components:</strong> Human heart anatomy is
               characterized by a four-chambered structure, each with distinct
@@ -178,7 +178,7 @@ export const Home = () => {
         <h3 className="text-left text-xl font-bold my-4">
           Human Heart Physiology: <em>Unveiling the Symphony of Life</em>
         </h3>
-        <p className="text-left">
+        <p className="text-justify">
           Human heart physiology delves into the dynamic and intricate processes
           governing the functioning of the human heart. It explores the
           physiological mechanisms that regulate the heartbeat, blood
@@ -192,7 +192,7 @@ export const Home = () => {
             className="rounded-lg shadow-lg"
           />
         </div>
-        <ol className="list-decimal  text-left mt-4">
+        <ol className="list-decimal  text-justify mt-4">
           <li>
             <strong>Cardiac Muscle Contraction:</strong> At the core of human
             heart physiology is the remarkable ability of cardiac muscle cells
