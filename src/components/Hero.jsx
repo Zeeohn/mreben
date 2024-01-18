@@ -2,7 +2,7 @@ import React from "react";
 
 export const Hero = ({ content, category, title, url, videoSrc, left }) => {
   return (
-    <div className="grid grid-cols-12 items-stretch gap-8 my-10">
+    <div className="grid md:grid-cols-12 items-stretch gap-8 my-10">
       <div className="col-span-12 lg:col-span-5 xl:col-span-7">
         <p className="mb-3 text-lg font-semibold uppercase leading-snug tracking-wide text-purple-600">
           {category}
@@ -10,7 +10,7 @@ export const Hero = ({ content, category, title, url, videoSrc, left }) => {
         <h2 className="mb-8 text-4xl font-extrabold tracking-tight text-gray-900  xl:text-6xl">
           {title}
         </h2>
-        <p className="mb-6 text-xl font-medium text-justify leading-8 text-gray-500 xl:text-2xl xl:leading-10">
+        <p className="mb-6 text-xl font-medium text-center leading-8 md:px-0 px-2 text-black xl:text-2xl xl:leading-10">
           {content}
         </p>
         <a
@@ -37,7 +37,7 @@ export const Hero = ({ content, category, title, url, videoSrc, left }) => {
       <div
         className={`col-span-12 lg:col-span-7 xl:col-span-5 ${
           left && "order-first"
-        }`}
+        } md:ml-0 ml-6`}
       >
         <div className="mt-4 h-full -translate-x-4 -rotate-2 rounded-3xl bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-500 p-4">
           <div className="h-full translate-x-4 rotate-6 overflow-hidden rounded-3xl shadow-lg transition-transform hover:scale-125">

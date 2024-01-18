@@ -72,17 +72,17 @@ function Footer() {
 
               <span className="top-[33px] absolute w-[7rem] h-[4px] bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-500 "></span>
 
-              <a href="#about">
+              <a href="/about">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
                   About Us
                 </p>
               </a>
-              <a href="#heartAnatomy">
+              <a href="/heartAnatomy">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
                   Heart Anatomy
                 </p>
               </a>
-              <a href="#heartPhysiology">
+              <a href="/heartPhysiology">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
                   Heart Physiology
                 </p>

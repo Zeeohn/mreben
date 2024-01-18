@@ -5,13 +5,16 @@ import "./App.css";
 import { AuthSignup, AuthLogin } from "./components/Auth";
 import { Home } from "./components/Home";
 import { Profile } from "./components/Profile";
+import { About } from "./components/About";
+import { Anatomy } from "./components/Anatomy";
+import { Physiology } from "./components/Physiology";
 
 function App() {
   let navigate = useNavigate();
   let authToken = sessionStorage.getItem("Auth Token");
   useEffect(() => {
-    if (authToken) {
-      navigate("/");
+    if (!authToken) {
+      navigate("/login");
     }
   }, [authToken]);
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/signup" element={<AuthSignup />} />
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/heartAnatomy" element={<Anatomy />} />
+        <Route path="/heartPhysiology" element={<Physiology />} />
       </Routes>
     </>
   );

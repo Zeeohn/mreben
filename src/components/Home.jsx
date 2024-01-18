@@ -19,14 +19,17 @@ export const Home = () => {
   return (
     <div>
       <Navbar />
-      <Hero
-        content="The human heart, a conical, hollow, and muscular organ, constitutes a vital component of the circulatory system, ceaselessly functioning throughout an individual's lifetime. Roughly equivalent in size to a clenched fist and weighing approximately 300 grams, the heart resides within the chest, positioned behind the breastbone and nestled between the two lungs. "
-        category="ANATOMY AND PHYSIOLOGY OF"
-        title="THE HUMAN HEART"
-        url="#heartAnatomy"
-        videoSrc="https://res.cloudinary.com/ddbtxfsfk/video/upload/f_auto:video,q_auto/pivmutxqanujbx4kr4xp"
-      />
-      <div
+      <div className="flex items-center justify-center">
+        <Hero
+          content="The human heart, a conical, hollow, and muscular organ, constitutes a vital component of the circulatory system, ceaselessly functioning throughout an individual's lifetime. Roughly equivalent in size to a clenched fist and weighing approximately 300 grams, the heart resides within the chest, positioned behind the breastbone and nestled between the two lungs. "
+          category="ANATOMY AND PHYSIOLOGY OF"
+          title="THE HUMAN HEART"
+          url="/heartAnatomy"
+          videoSrc="https://res.cloudinary.com/ddbtxfsfk/video/upload/f_auto:video,q_auto/pivmutxqanujbx4kr4xp"
+        />
+      </div>
+
+      {/* <div
         id="about"
         className="flex flex-col rounded-lg md:flex-row w-full h-screen bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-500 my-24"
       >
@@ -63,7 +66,7 @@ export const Home = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="mt-5" id="heartAnatomy">
         <div className="mt-5">
           <h1 className="font-bold text-3xl text-left nt-5 mb-4">
@@ -98,167 +101,79 @@ export const Home = () => {
             both a marvel of biological engineering and the pulsating epicenter
             of vitality within the human body.
           </p>
-          <h3 className="text-left text-xl font-bold my-4">
-            Human Heart Anatomy: <em>A Pinnacle of Biological complexity</em>{" "}
-          </h3>
-          <p className="text-justify">
-            Human heart anatomy refers to the detailed study and understanding
-            of the structure, organization, and components of the human heart,
-            including its chambers, valves, blood vessels, and the intricate
-            physiological features that contribute to its function within the
-            circulatory system.
-          </p>
-          <div className="py-3 flex items-center justify-center">
-            <img
-              src="https://res.cloudinary.com/ddbtxfsfk/image/upload/f_auto,q_auto/clqnxi2dfulc0gsydtyp"
-              className="rounded-lg shadow-lg"
-            />
+        </div>
+        <div className="mt-8 md:flex md:justify-center">
+          <a
+            href="/heartAnatomy"
+            className="text-xl font-medium text-purple-600 transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
+          >
+            Learn more about the Heart Anatomy
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="ml-2 inline-flex h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+        <div className="mt-8 md:mt-12 md:flex md:justify-center">
+          <a
+            href="/heartPhysiology"
+            className="text-xl font-medium text-purple-600 transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
+          >
+            Learn more about the Heart Physiology
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="ml-2 inline-flex h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+        <h1 className="font-bold text-3xl mt-10">Heart Images</h1>
+        <div className="p-5 sm:p-8">
+          <div className="columns-1 gap-5 sm:columns-2 sm:gap-2 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
+            <video autoPlay muted loop>
+              <source
+                src="https://res.cloudinary.com/ddbtxfsfk/video/upload/f_auto:video,q_auto/ab7d0camlpjqvhvlbq2h"
+                type="video/mp4"
+              />
+            </video>
+            <img src="https://w0.peakpx.com/wallpaper/1001/972/HD-wallpaper-aortic-arch-anatomy-function-and-significance-human-heart.jpg" />
+            <img src="https://c4.wallpaperflare.com/wallpaper/874/941/205/heart-man-medicine-lungs-wallpaper-preview.jpg" />
+            <img src="https://c4.wallpaperflare.com/wallpaper/632/1005/174/heart-pictures-for-desktop-wallpaper-preview.jpg" />
+            <img src="https://t3.ftcdn.net/jpg/04/46/18/40/360_F_446184023_GW30hNDr8nLpWxAWClovs2HHuS3wXVPR.jpg" />
+            <img src="https://cdnb.artstation.com/p/assets/images/images/011/338/003/large/michel-paschalis-human-heart-01.jpg?1529056146" />
+            <img src="https://i.ytimg.com/vi/SwHjwO7BnsI/maxresdefault.jpg" />
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDY5cHB2c3Qwajg2c2ZvdHBkZG9kYm90cWcyOHd4NWkzcnRlZ3dpaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rMfiAUhjQW4aQ/giphy.gif" />
+            <img src="https://media2.giphy.com/media/mNBDoWkp6rWnu/giphy.gif?cid=ecf05e471twm5s92lnfog68einlk1bzlrgaloyqe8ue2mnaf&ep=v1_gifs_related&rid=giphy.gif&ct=g" />
+            <img src="https://media.sketchfab.com/models/168b474fba564f688048212e99b4159d/thumbnails/23e35e773a634c24bec42ead5f02e129/blob.jpeg" />
+            <img src="https://media1.giphy.com/media/kgNmbsAHSaaSgSDp2d/giphy.gif?cid=ecf05e477fqieolvt1gsrefkv391q8peyietmem845jivo7k&ep=v1_gifs_related&rid=giphy.gif&ct=g" />
+            <img src="https://media3.giphy.com/media/jMhZWStOgAjG75Q1P6/200w.webp?cid=ecf05e47bm56li1xougyhqlkg5sr2ryiklgamovpfqmz9zyt&ep=v1_gifs_related&rid=200w.webp&ct=g" />
+            <img src="https://media1.giphy.com/media/800cazaNjjScQAahtF/200w.webp?cid=ecf05e47bm56li1xougyhqlkg5sr2ryiklgamovpfqmz9zyt&ep=v1_gifs_related&rid=200w.webp&ct=g" />
+            <img src="https://media2.giphy.com/media/EWeVomGXzxUQqBM7Ix/200w.webp?cid=ecf05e47bm56li1xougyhqlkg5sr2ryiklgamovpfqmz9zyt&ep=v1_gifs_related&rid=200w.webp&ct=g" />
           </div>
-          <ol className="list-decimal  text-justify mt-4">
-            <li>
-              <strong>Structural Components:</strong> Human heart anatomy is
-              characterized by a four-chambered structure, each with distinct
-              responsibilities. The upper chambers, or atria, act as receiving
-              chambers, accepting blood returning to the heart. Contrarily, the
-              lower chambers, or ventricles, serve as powerful pumps propelling
-              blood into circulation. Valves, strategically positioned within
-              the heart, ensure the unidirectional flow of blood, preventing
-              backflow and optimizing the efficiency of the circulatory system.
-            </li>
-            <li className="py-1">
-              <strong>Blood Vessel Network:</strong> Integral to heart anatomy
-              is the extensive network of blood vessels—arteries, veins, and
-              capillaries—that extends the heart's influence to every corner of
-              the body. Arteries carry oxygenated blood away from the heart to
-              nourish tissues, while veins return deoxygenated blood for
-              replenishment. Capillaries, at the microscopic level, enable the
-              exchange of nutrients and waste products, underscoring the
-              interconnectedness of the circulatory system.
-            </li>
-            <li className="py-1">
-              <strong>Cardiac Cycle Dynamics:</strong> Human heart anatomy is
-              inseparable from the cardiac cycle, a rhythmic sequence of
-              contractions and relaxations dictating the heart's pumping action.
-              Systole, the contraction phase, propels blood into circulation,
-              while diastole, the relaxation phase, facilitates chamber
-              refilling. This orchestrated dance of contractions and relaxations
-              ensures the continuous and efficient circulation of blood,
-              sustaining life.
-            </li>
-            <li className="py-1">
-              <strong>Electrical Conduction System:</strong>At the heart of
-              heart anatomy is the electrical conduction system, orchestrating
-              the synchronized beats that drive circulation. The sinoatrial (SA)
-              node initiates electrical impulses, triggering atrial
-              contractions. Subsequently, the atrioventricular (AV) node
-              conducts signals, leading to ventricular contractions. This
-              precisely coordinated electrical communication underlies the
-              rhythmic heartbeat essential for the heart's pumping function.
-            </li>
-            <li className="py-1">
-              <strong>Clinical Implications: </strong>
-              Understanding human heart anatomy holds profound clinical
-              significance. Healthcare professionals rely on this knowledge for
-              diagnosing and treating various cardiovascular conditions. A
-              comprehensive grasp of heart anatomy is indispensable for
-              interpreting medical images, planning surgical interventions, and
-              providing effective patient care.
-            </li>
-            <br /> <br />
-            In essence, human heart anatomy represents the pinnacle of
-            biological complexity. Its multifaceted structure and dynamic
-            functionality showcase nature's ingenuity in sustaining life through
-            the orchestrated rhythm of the heart's beats. Delving into the
-            meaning of human heart anatomy unravels the mysteries of an organ
-            that serves as both the physical and metaphorical center of life.
-          </ol>
         </div>
       </div>
-      <div id="heartPhysiology">
-        <h3 className="text-left text-xl font-bold my-4">
-          Human Heart Physiology: <em>Unveiling the Symphony of Life</em>
-        </h3>
-        <p className="text-justify">
-          Human heart physiology delves into the dynamic and intricate processes
-          governing the functioning of the human heart. It explores the
-          physiological mechanisms that regulate the heartbeat, blood
-          circulation, and the vital interplay of various components, unveiling
-          the symphony of life orchestrated within the chambers of this
-          remarkable organ.
-        </p>
-        <div className="py-3 flex items-center justify-center">
-          <img
-            src="https://res.cloudinary.com/ddbtxfsfk/image/upload/f_auto,q_auto/zevmsmup9lh9ez0bv7iv"
-            className="rounded-lg shadow-lg"
-          />
-        </div>
-        <ol className="list-decimal  text-justify mt-4">
-          <li>
-            <strong>Cardiac Muscle Contraction:</strong> At the core of human
-            heart physiology is the remarkable ability of cardiac muscle cells
-            to contract rhythmically. This orchestrated contraction, controlled
-            by the heart's intrinsic electrical conduction system, initiates the
-            heartbeat. The coordinated dance of cardiac muscle fibers,
-            responding to electrical signals, ensures the powerful and
-            synchronized pumping action necessary for blood circulation.
-          </li>
-          <li className="py-1">
-            <strong>Blood Circulation Dynamics:</strong> Human heart physiology
-            intricately governs the circulation of blood throughout the body.
-            The heart serves as a dual pump, with the right side pumping
-            deoxygenated blood to the lungs for oxygenation, while the left side
-            propels oxygenated blood to nourish tissues. The regulatory role of
-            valves, directing the flow of blood between chambers, ensures a
-            continuous and unidirectional circulation, optimizing nutrient and
-            oxygen delivery to cells.
-          </li>
-          <li className="py-1">
-            <strong>Blood Pressure Regulation:</strong> Heart physiology plays a
-            pivotal role in regulating blood pressure, a key determinant of
-            cardiovascular health. Contraction of the heart's ventricles
-            generates the force needed to propel blood into the arteries,
-            creating blood pressure. The delicate balance between systolic
-            (contraction) and diastolic (relaxation) pressures is crucial for
-            maintaining optimal circulation and preventing conditions like
-            hypertension.
-          </li>
-          <li className="py-1">
-            <strong>Oxygen and Nutrient Exchange:</strong>
-            The physiological intricacies of the human heart extend to the
-            exchange of oxygen and nutrients at the cellular level. Capillaries,
-            the smallest blood vessels, facilitate this exchange in tissues,
-            ensuring that cells receive the essential elements needed for energy
-            production and metabolic processes. This intricate network of
-            vessels underscores the intimate connection between heart physiology
-            and overall cellular function.
-          </li>
-          <li className="py-1">
-            <strong>Autonomic Nervous System Influence:</strong> Human heart
-            physiology is modulated by the autonomic nervous system, which
-            includes sympathetic and parasympathetic branches. Sympathetic
-            stimulation accelerates heart rate and enhances cardiac output,
-            preparing the body for activity. In contrast, parasympathetic
-            activity slows the heart rate, promoting relaxation and conservation
-            of energy. This dynamic interplay ensures that the heart responds
-            appropriately to the body's physiological demands.
-          </li>
-          <li className="py-1">
-            <strong>Clinical Relevance:</strong> Understanding human heart
-            physiology is imperative in the clinical realm. Healthcare
-            professionals leverage this knowledge to diagnose and manage
-            cardiovascular conditions. Parameters such as heart rate, cardiac
-            output, and electrocardiographic patterns serve as vital indicators
-            in assessing cardiac health and guiding medical interventions.
-          </li>{" "}
-          <br /> <br /> In summary, human heart physiology unveils the
-          intricacies of a dynamic and vital organ. From the rhythmic
-          contraction of cardiac muscle to the regulation of blood circulation
-          and the nuanced exchange of gases and nutrients, heart physiology
-          illuminates the orchestration of life-sustaining processes within the
-          chambers of this extraordinary organ.
-        </ol>
-      </div>
+
       <Footer />
     </div>
   );
 };
+//

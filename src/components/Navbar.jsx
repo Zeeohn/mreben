@@ -74,13 +74,13 @@ export const Navbar = () => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-white hover:text-indigo-200">
-                <a href="#about">About Us</a>
+                <a href="/about">About Us</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="#heartAnatomy">Heart Anatomy</a>
+                <a href="/heartAnatomy">Anatomy</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="#heartPhysiology">Heart Physiology</a>
+                <a href="/heartPhysiology">Physiology</a>
               </li>
               <li className="text-white hover:text-indigo-200">
                 <a href="#interactiveLabs">Interactive Labs</a>
@@ -96,14 +96,14 @@ export const Navbar = () => {
             <div className="mt-3 space-y-2 lg:hidden md:inline-block">
               <button
                 onClick={handleNavigate}
-                className="w-10 h-10 rounded-full border-2 border-purple-800 bg-white mt-4"
+                className="w-13 h-13 rounded-full border-4 border-indigo-900 bg-white mt-4 items-center"
               >
                 {picture ? (
-                  <img src={picture} className="w-10 h-10  rounded-full" />
+                  <img src={picture} className="w-12 h-12 rounded-full" />
                 ) : (
                   <img
                     src="https://res.cloudinary.com/ddbtxfsfk/image/upload/v1677178789/user-image-with-black-background_oslni5.png"
-                    className="w-10 h-10 -top-1 relative"
+                    className="w-12 h-12 -top-1 relative"
                   />
                 )}
               </button>
@@ -113,10 +113,10 @@ export const Navbar = () => {
         <div className="hidden space-x-2 md:inline-block">
           <button
             onClick={handleNavigate}
-            className="w-10 h-10 rounded-full border-2 border-purple-800 bg-white"
+            className="w-11 h-11 rounded-full border-4 border-indigo-900 bg-white mt-4"
           >
             {picture ? (
-              <img src={picture} className="w-10 h-10  rounded-full" />
+              <img src={picture} className="w-10 h-9 rounded-full" />
             ) : (
               <img
                 src="https://res.cloudinary.com/ddbtxfsfk/image/upload/v1677178789/user-image-with-black-background_oslni5.png"
