@@ -72,7 +72,7 @@ export const Home = () => {
           <h1 className="font-bold text-3xl text-left nt-5 mb-4">
             Human Heart
           </h1>
-          <p className="text-justify">
+          <p className="text-justify font-medium text-xl">
             The heart is encased in a resilient, dual-layered membranous
             structure known as the pericardium, the heart benefits from a
             fluid-filled space, minimizing friction during its rhythmic pumping
@@ -84,10 +84,10 @@ export const Home = () => {
             increased supply of oxygen and nutrients to meet the heightened
             demands of the body's cells.
           </p>
-          <h2 className="font-bold my-4 text-2xl text-left">
+          <h2 className="font-bold my-4 text-3xl text-left">
             Human Heart Anatomy and Physiology
           </h2>
-          <p className="text-justify">
+          <p className="text-justify font-medium text-xl">
             Human heart anatomy and physiology collectively elucidate the
             intricate orchestration of structure and function within the
             cardiovascular system. Anatomy delves into the detailed exploration
@@ -102,49 +102,51 @@ export const Home = () => {
             of vitality within the human body.
           </p>
         </div>
-        <div className="mt-8 md:flex md:justify-center">
-          <a
-            href="/heartAnatomy"
-            className="text-xl font-medium text-purple-600 transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
-          >
-            Learn more about the Heart Anatomy
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="ml-2 inline-flex h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <div className="md:flex md:mt-10 md:flex-row items-center justify-center gap-2">
+          <div className="mt-8 md:mt-0 md:flex md:justify-center">
+            <a
+              href="/heartAnatomy"
+              className="text-xl font-medium text-purple-600 transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </a>
-        </div>
-        <div className="mt-8 md:mt-12 md:flex md:justify-center">
-          <a
-            href="/heartPhysiology"
-            className="text-xl font-medium text-purple-600 transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
-          >
-            Learn more about the Heart Physiology
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="ml-2 inline-flex h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+              Learn more about the Heart Anatomy
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="ml-2 inline-flex h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+          <div className="mt-8 md:mt-0 md:flex md:justify-center">
+            <a
+              href="/heartPhysiology"
+              className="text-xl font-medium text-purple-600 transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </a>
+              Learn more about the Heart Physiology
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="ml-2 inline-flex h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
         <h1 className="font-bold text-3xl mt-10">Heart Images</h1>
         <div className="p-5 sm:p-8">
