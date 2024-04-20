@@ -63,11 +63,10 @@ export const Chatbot = () => {
         <AlwaysScrollToBottom />
         <MainContainer>
           <ChatContainer>
-            {/* Shows all our messages */}
             <MessageList
               typingIndicator={
                 loading ? (
-                  <TypingIndicator content="BeenCardio Bot is thinking" />
+                  <TypingIndicator content="BeenCardio Bot is thinking..." />
                 ) : null
               }
             >
@@ -77,20 +76,19 @@ export const Chatbot = () => {
                     key={i}
                     model={{
                       message: message.parts.map(
-                        (part, j) =>
-                          part.text
-                          // <ReactMarkdown
-                          //   key={j}
-                          //   components={{
-                          //     p: ({ node, ...props }) => (
-                          //       <Text {...props} className="text-sm" />
-                          //     ),
-                          //   }}
-                          // >
-                          //   {part.text}
-                          // </ReactMarkdown>
+                        (part, j) => part.text
+                        // <ReactMarkdown
+                        //   key={j}
+                        //   components={{
+                        //     p: ({ node, ...props }) => (
+                        //       <Text {...props} className="text-sm" />
+                        //     ),
+                        //   }}
+                        // >
+                        //   {part.text}
+                        // </ReactMarkdown>
                       ),
-                      sender: message.role === "user" ? "me" : "bot",
+                      sender: message.role === "model" ? "bot" : "me",
                     }}
                     style={
                       message.role === "model"

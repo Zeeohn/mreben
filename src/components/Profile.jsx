@@ -12,7 +12,7 @@ export const Profile = () => {
   let name = sessionStorage.getItem("Name");
 
   return (
-    <div className="flex flex-col items-centerf justify-center">
+    <div className="flex flex-col items-center justify-center">
       <p>
         {`Welcome, ${
           name ? name : "user"

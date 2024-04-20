@@ -87,45 +87,22 @@ function Footer() {
                   Heart Physiology
                 </p>
               </a>
-              <a href="#interactiveLabs">
+              <a href="/labs">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
                   Interactive Labs
                 </p>
               </a>
-              <a href="#assessment">
+              <a href="/quiz">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
                   Assessment
                 </p>
               </a>
-              <a href="#chatbot">
+              <a href="/chatbot">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
                   Chatbot
                 </p>
               </a>
             </div>
-
-            {/* right div
-            <div className="flex flex-col gap-8 relative">
-              <p className="text-[22px] font-bold footer-main">Working Hours</p>
-
-              <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#ff0366]"></span>
-
-              <p className="text-[16px]  text-[#646464] font-bold">
-                Monday - Friday:
-              </p>
-              <p className="text-[16px] text-[#646464] font-medium">
-                7:00am - 21:00pm
-              </p>
-              <p className="text-[16px] text-[#646464] font-bold">Saturday:</p>
-              <p className="text-[16px] text-[#646464] font-medium">
-                7:00am - 19:00pm
-              </p>
-              <p className="text-[16px] text-[#646464] font-bold ">
-                Sunday - Closed
-              </p>
-            </div> */}
-
-            {/* middle div */}
             <span></span>
           </div>
         </div>
