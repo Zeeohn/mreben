@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "question": "The walls of the ventricles possess thick muscular projections, they are known as?",
+    "answers": [
+      {
+        "id": 1,
+        "answer": " Conus arteriosus",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "Truncus arterosus",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "Chordae tendineae",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "Columnae carneae",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Regulation of normal activities of the human heart takes place",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "by the autonomic nervous system",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "intrinsically",
+        "correct": true
+      },
+      {
+        "id": 3,
+        "answer": "by the diencephalon",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "by the brain stem",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "The location of the neuro centre activity of the heart is",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "Midbrain",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "Pons",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "Cerebrum",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "Medulla Oblongata",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "The hormonal regulation of cardiac output is",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "mediated by the adrenal medulla",
+        "correct": true
+      },
+      {
+        "id": 2,
+        "answer": "mediated by the adrenal cortex",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "mediated by thyroid",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "mediated by pineal",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "The reason why tricuspid and bicuspid valves are closed is",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "ventricular relaxation",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "ventricular filling",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "atrial systole",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "attempted backflow of blood into the atria",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Which of these events will not take place if the semilunar valves did not function?",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "ventricular contraction",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "atrial contraction",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "blood flow",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "Production of heart sound",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "The reason why the SA node (sino-atrial node) is the natural pacemaker is",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "generates an action potential which is more in size than other parts of the conducting system",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "only part of the conducting system generating impulse",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "located in the right atrium",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "generates the highest number of action potentials in the conducting system",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "The tricuspid valve is present between",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "Ventricle and pulmonary artery",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "Ventricle and aorta",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "left auricle and left ventricle",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "right auricle and right ventricle",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Bundle of HIS is a network of",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "Muscle fibres present only in the ventricle wall",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "Nerve fibres distributed in ventricles",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "muscle fibres distributed throughout the heart walls",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "nerve fibres found throughout the heart",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "The location of the neuro centre activity of the heart is",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "Midbrain",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "answer": "Pons",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "answer": "Cerebrum",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "answer": "Medulla Oblongata",
+        "correct": true
+      }
+    ]
+  }
+]

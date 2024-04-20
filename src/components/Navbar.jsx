@@ -83,13 +83,13 @@ export const Navbar = () => {
                 <a href="/heartPhysiology">Physiology</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="#interactiveLabs">Interactive Labs</a>
+                <a href="/labs">Interactive Labs</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="#assessment">Assessment</a>
+                <a href="/quiz">Assessment</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="#chatbot">Chatbot</a>
+                <a href="/chatbot">Chatbot</a>
               </li>
             </ul>
 
