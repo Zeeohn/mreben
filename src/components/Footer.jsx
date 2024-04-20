@@ -89,7 +89,7 @@ function Footer() {
               </a>
               <a href="/labs">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
-                  Interactive Labs
+                  Tutorial Stream
                 </p>
               </a>
               <a href="/quiz">

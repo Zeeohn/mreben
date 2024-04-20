@@ -83,7 +83,7 @@ export const Navbar = () => {
                 <a href="/heartPhysiology">Physiology</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="/labs">Interactive Labs</a>
+                <a href="/labs">Tutorial Stream</a>
               </li>
               <li className="text-white hover:text-indigo-200">
                 <a href="/quiz">Assessment</a>
