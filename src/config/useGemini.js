@@ -49,6 +49,14 @@ export default function useGemini() {
             },
           ],
         },
+        {
+          role: "user",
+          parts: [
+            {
+              text: "try again!",
+            },
+          ],
+        },
       ]);
       console.error("An error occurred:", error);
     } finally {
