@@ -46,10 +46,12 @@ export const Chatbot = () => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer sk-proj-yEdZZbcFbuFDjl3uYbV7T3BlbkFJJ7FlJcr4zweuJamjG1sC`,
+          Authorization: `Bearer `,
         },
       }
     );
+
+    // sk-proj-yEdZZbcFbuFDjl3uYbV7T3BlbkFJJ7FlJcr4zweuJamjG1sC
 
     // Update the conversation history with the response from ChatGPT
     setMessages([
