@@ -5,17 +5,6 @@ import { Hero } from "./Hero";
 import Footer from "./Footer";
 
 export const Home = () => {
-  let navigate = useNavigate();
-  let authToken = sessionStorage.getItem("Auth Token");
-  useEffect(() => {
-    if (authToken) {
-      navigate("/");
-    }
-
-    if (!authToken) {
-      navigate("/login");
-    }
-  }, [authToken]);
   return (
     <div>
       <Navbar />
@@ -167,9 +156,9 @@ export const Home = () => {
             <img src="https://media2.giphy.com/media/mNBDoWkp6rWnu/giphy.gif?cid=ecf05e471twm5s92lnfog68einlk1bzlrgaloyqe8ue2mnaf&ep=v1_gifs_related&rid=giphy.gif&ct=g" />
             <img src="https://media.sketchfab.com/models/168b474fba564f688048212e99b4159d/thumbnails/23e35e773a634c24bec42ead5f02e129/blob.jpeg" />
             <img src="https://media1.giphy.com/media/kgNmbsAHSaaSgSDp2d/giphy.gif?cid=ecf05e477fqieolvt1gsrefkv391q8peyietmem845jivo7k&ep=v1_gifs_related&rid=giphy.gif&ct=g" />
-            <img src="https://media3.giphy.com/media/jMhZWStOgAjG75Q1P6/200w.webp?cid=ecf05e47bm56li1xougyhqlkg5sr2ryiklgamovpfqmz9zyt&ep=v1_gifs_related&rid=200w.webp&ct=g" />
+            {/* <img src="https://media3.giphy.com/media/jMhZWStOgAjG75Q1P6/200w.webp?cid=ecf05e47bm56li1xougyhqlkg5sr2ryiklgamovpfqmz9zyt&ep=v1_gifs_related&rid=200w.webp&ct=g" />
             <img src="https://media1.giphy.com/media/800cazaNjjScQAahtF/200w.webp?cid=ecf05e47bm56li1xougyhqlkg5sr2ryiklgamovpfqmz9zyt&ep=v1_gifs_related&rid=200w.webp&ct=g" />
-            <img src="https://media2.giphy.com/media/EWeVomGXzxUQqBM7Ix/200w.webp?cid=ecf05e47bm56li1xougyhqlkg5sr2ryiklgamovpfqmz9zyt&ep=v1_gifs_related&rid=200w.webp&ct=g" />
+            <img src="https://media2.giphy.com/media/EWeVomGXzxUQqBM7Ix/200w.webp?cid=ecf05e47bm56li1xougyhqlkg5sr2ryiklgamovpfqmz9zyt&ep=v1_gifs_related&rid=200w.webp&ct=g" /> */}
           </div>
         </div>
       </div>

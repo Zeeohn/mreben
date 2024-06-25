@@ -2,14 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export const Profile = () => {
-  let navigate = useNavigate();
-
-  const handleLogout = () => {
-    sessionStorage.removeItem("Auth Token");
-    navigate("/login");
-  };
-
-  let name = sessionStorage.getItem("Name");
 
   return (
     <div className="flex flex-col items-center justify-center">

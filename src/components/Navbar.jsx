@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate("/profile");
-  };
+  // const handleNavigate = () => {
+  //   navigate("/profile");
+  // };
 
-  let picture = sessionStorage.getItem("picture");
+  // let picture = sessionStorage.getItem("picture");
 
   return (
     <nav className="w-full bg-black shadow">
@@ -93,7 +93,7 @@ export const Navbar = () => {
               </li>
             </ul>
 
-            <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+            {/* <div className="mt-3 space-y-2 lg:hidden md:inline-block">
               <button
                 onClick={handleNavigate}
                 className="w-13 h-13 rounded-full border-4 border-indigo-900 bg-white mt-4 items-center"
@@ -107,10 +107,10 @@ export const Navbar = () => {
                   />
                 )}
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="hidden space-x-2 md:inline-block">
+        {/* <div className="hidden space-x-2 md:inline-block">
           <button
             onClick={handleNavigate}
             className="w-11 h-11 rounded-full border-4 border-indigo-900 bg-white mt-4"
@@ -124,7 +124,7 @@ export const Navbar = () => {
               />
             )}
           </button>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
