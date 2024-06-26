@@ -53,15 +53,14 @@ function Footer() {
                 })}
               </div>
               <p className="text-[16px] font-medium text-[#646464]">
-                © {new Date().getFullYear()} BeeNCardiac <br /> Developed with
-                &#10084; by{" "}
+                © {new Date().getFullYear()} <br /> Developed with &#10084; by{" "}
                 <a
                   target="_blank"
                   rel="noreferrer"
                   href="https://wa.me/message/ACG6T4NMBL2EE1"
                   className="text-green-600 underline"
                 >
-                  Z-CODES
+                  BeeN Cardiac Resource Center
                 </a>
               </p>
             </div>
