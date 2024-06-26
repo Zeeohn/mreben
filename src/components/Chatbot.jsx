@@ -46,7 +46,7 @@ export const Chatbot = () => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.OPENAI}`,
+          Authorization: `Bearer ${import.meta.env.VITE_OPENAI}`,
         },
       }
     );
