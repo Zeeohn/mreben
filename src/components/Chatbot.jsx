@@ -49,7 +49,7 @@ export const Chatbot = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_PROXY}`, {
+      const response = await axios.post(`${import.meta.env.VITE_PROXY}/proxy`, {
         model: "claude-3-haiku-20240307",
         system:
           "You are a heart physiology and anatomy professor and specialist.",
@@ -109,7 +109,7 @@ export const Chatbot = () => {
               type="text"
               value={input}
               onChange={handleInputChange}
-              className="flex-1 p-2 border border-gray-300 rounded-md"
+              className="flex-1 p-2 w-1/2 border border-gray-300 rounded-md"
               placeholder="Type a message"
             />
             <button
