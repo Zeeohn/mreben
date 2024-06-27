@@ -4,13 +4,24 @@ import { Navbar } from "./Navbar";
 import Footer from "./Footer";
 
 const Text = ({ children, className }) => {
-  <span className={`${className}`}>{children}</span>;
+  return <span className={`${className}`}>{children}</span>;
 };
 
 export const Chatbot = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // Load messages from local storage
+    const savedMessages = JSON.parse(localStorage.getItem("messages")) || [];
+    setMessages(savedMessages);
+  }, []);
+
+  useEffect(() => {
+    // Save messages to local storage whenever they are updated
+    localStorage.setItem("messages", JSON.stringify(messages));
+  }, [messages]);
 
   const AlwaysScrollToBottom = () => {
     const elementRef = useRef();
@@ -29,72 +40,90 @@ export const Chatbot = () => {
   };
 
   const handleSendMessage = async () => {
-    // Make a request to the ChatGPT API with the user input
-    const response = await axios.post(
-      "https://api.openai.com/v1/chat/completions",
-      {
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are a heart physiology and anatomy professor and specialist.",
-          },
-          { role: "user", content: input },
-        ],
-        model: "gpt-3.5-turbo",
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_OPENAI}`,
-        },
-      }
-    );
+    if (!input.trim()) return;
 
-    // Update the conversation history with the response from ChatGPT
-    setMessages([
-      ...messages,
-      { role: "assistant", content: response.data.choices[0].message.content },
-    ]);
+    // Add user's message to the messages array
+    const userMessage = { role: "user", content: input };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
 
-    // Clear the input field
-    setInput("");
+    setLoading(true);
+
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_PROXY}`, {
+        model: "claude-3-haiku-20240307",
+        system:
+          "You are a heart physiology and anatomy professor and specialist.",
+        max_tokens: 1024,
+        messages: [{ role: "user", content: input }],
+      });
+
+      const assistantMessage = {
+        role: "assistant",
+        content: response.data.content[0].text,
+      };
+
+      setMessages((prevMessages) => [...prevMessages, assistantMessage]);
+    } catch (error) {
+      console.error("Error fetching response:", error);
+      // setMessages((prevMessages) => [...prevMessages, { role: "assistant", content: "There was an error processing your message. Please try again." }]);
+      alert("There was an error processing your message. Please try again.");
+    } finally {
+      setLoading(false);
+      setInput("");
+    }
+  };
+
+  const formatMessage = (message) => {
+    return message
+      .replace(/\n/g, "<br/>")
+      .replace(/(\d+\. )/g, "<strong>$1</strong>");
   };
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="flex flex-col max-w-[600px] h-[50vh] m-auto px-10 border border-black rounded-md">
-        <div>
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className={`${
-                message.role === "user"
-                  ? "text-left bg-white text-black"
-                  : "text-right bg-white text-black"
-              } mb-5`}
+      <div className="flex-1 flex flex-col items-center justify-center p-4">
+        <h3 className="text-4xl text-center mb-5 font-bold">BeeNCardiac Bot</h3>
+        <div className="flex flex-col max-w-2xl w-full h-3/4 border bg-gray-200 border-gray-300 rounded-md shadow-lg">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`p-3 rounded-lg max-w-lg ${
+                  message.role === "user"
+                    ? "bg-blue-500 text-white text-left"
+                    : "bg-white text-black text-left self-end"
+                }`}
+                dangerouslySetInnerHTML={{
+                  __html: formatMessage(message.content),
+                }}
+              />
+            ))}
+            <AlwaysScrollToBottom />
+            {loading && (
+              <div className="self-start text-gray-500">Typing...</div>
+            )}
+          </div>
+          <div className="p-4 border-t border-gray-300 flex items-center space-x-2">
+            <input
+              type="text"
+              value={input}
+              onChange={handleInputChange}
+              className="flex-1 p-2 border border-gray-300 rounded-md"
+              placeholder="Type a message"
+            />
+            <button
+              onClick={handleSendMessage}
+              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
             >
-              {message.content}
-            </div>
-          ))}
-        </div>
-        <div className="flex mt-5 mb-1">
-          <input
-            type="text"
-            value={input}
-            onChange={handleInputChange}
-            className="flex-1 p-2 border border-black rounded-md mr-2"
-          />
-          <button
-            onClick={handleSendMessage}
-            className="bg-[#007bff] text-white px-6 py-3 rounded-md"
-          >
-            Send
-          </button>
+              Send
+            </button>
+          </div>
         </div>
       </div>
       <Footer />
     </div>
   );
 };
+
+export default Chatbot;
