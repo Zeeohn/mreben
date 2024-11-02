@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [anatomyDropdown, setAnatomyDropdown] = useState(false);
+  const [physiologyDropdown, setPhysiologyDropdown] = useState(false);
 
   // const navigate = useNavigate();
 
@@ -76,11 +78,47 @@ export const Navbar = () => {
               <li className="text-white hover:text-indigo-200">
                 <a href="/about">About Us</a>
               </li>
-              <li className="text-white hover:text-indigo-200">
-                <a href="/heartAnatomy">Anatomy</a>
+              <li className="relative text-white hover:text-indigo-200">
+                {/* <a href="/heartAnatomy">Cardiovascular Anatomy</a> */}
+                <button
+                  onClick={() => setAnatomyDropdown(!anatomyDropdown)}
+                  className="focus:outline-none focus:text-indigo-400"
+                >
+                  Cardiovascular Anatomy
+                </button>
+                {anatomyDropdown && (
+                  <ul className="absolute left-0 mt-2 w-44 bg-white text-black shadow-lg rounded-md z-50 border border-black">
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartAnatomy">Heart Anatomy</a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                      <a href="/heartAnatomy#statement">
+                        Statement of objectives
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                      <a href="/heartAnatomy#mediastinum">
+                        Gross Anatomy of the Mediastinum
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                      <a href="/heartAnatomy#pericardium">
+                        Pericardium and Pericardial Sinuses
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                      <a href="/heartAnatomy#greatVessel">
+                        Features of the Heart and Great Vessels
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                      <a href="/heartAnatomy#blood">Vascular Anatomy</a>
+                    </li>
+                  </ul>
+                )}
               </li>
-              <li className="text-white hover:text-indigo-200">
-                <a href="/heartPhysiology">Physiology</a>
+              <li className="relative text-white hover:text-indigo-200">
+                <a href="/heartPhysiology">Cardiovascular Physiology</a>
               </li>
               <li className="text-white hover:text-indigo-200">
                 <a href="/labs">Tutorial Stream</a>

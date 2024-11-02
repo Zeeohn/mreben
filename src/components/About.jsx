@@ -17,20 +17,17 @@ export const About = () => {
       </div>
       <div className="flex justify-center items-center mt-4">
         <p className="text-lg md:text-xl text-justify text-black mb-8">
-          <strong>
-            <em>BeeNCardiac: Heart Anatomy and Physiology</em>
-          </strong>{" "}
-          is committed to revolutionizing medical education through technology.
-          Our team of experts and educators collaborates to bring you an
-          advanced, interactive, and personalized learning experience
+          The primary aim of this website is to enhance the learning of
+          Cardiovascular Biology in Nigeria through the development and
+          validation of an Artificial Intelligence-powered website.
           <br />
           <br />
-          Embark on your journey to master human heart anatomy and physiology.
-          Start exploring the wonders of the cardiovascular system with{" "}
-          <strong>
-            <em>BeeNCardiac: Heart Anatomy and Physiology</em>
-          </strong>{" "}
-          today!
+          This initiative is a part of the research conducted by Ebenezer
+          Omolafe Babalola in the Department of Educational Technology at the
+          Faculty of Education, University of Ilorin, under the supervision of
+          Professor Charles Olabode Olumorin, in partial fulfillment of the
+          requirements for the award of the degree of Doctor of Philosophy
+          (Ph.D.) in Educational Technology.
         </p>
       </div>
       <h1 className="font-bold text-3xl">Related Works</h1>
