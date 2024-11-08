@@ -7,7 +7,7 @@ export const Labs = () => {
     <div>
       <Navbar />
       <div className="flex justify-center items-center flex-col">
-        <div className="w-full h-[40vh] md:h-[60vh] bg-[url('https://res.cloudinary.com/ddbtxfsfk/image/upload/f_auto,q_auto/denm759f8z2x6kheiead')] bg-cover bg-center flex-nowrap">
+        <div className="w-full h-[40vh] md:h-[60vh] bg-[url('https://res.cloudinary.com/dn8esrnij/image/upload/v1731070479/image_5qLQ8233_1722726119555_raw_txdlmm.jpg')] bg-cover bg-center flex-nowrap">
           <div className="w-full h-full flex justify-center items-center backdrop-brightness-50">
             <span className="text-white md:text-7xl text-3xl font-bold w-1/2 -mx-4">
               Tutorial Stream

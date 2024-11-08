@@ -1,0 +1,73 @@
+/* General Styles */
+.quiz-app {
+  /* width: 60%; */
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+.option:hover {
+  background-color: #d0d0d0;
+}
+
+/* Correct Answer Animation */
+.option.correct {
+  background-color: #8bc34a;
+  color: white;
+  animation: correctAnimation 0.5s ease;
+}
+
+@keyframes correctAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Incorrect Answer Animation */
+.option.incorrect {
+  background-color: #e57373;
+  color: white;
+  animation: incorrectAnimation 0.5s ease;
+}
+
+@keyframes incorrectAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Feedback Messages */
+.celebrate,
+.try-again {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}

@@ -87,38 +87,140 @@ export const Navbar = () => {
                   Cardiovascular Anatomy
                 </button>
                 {anatomyDropdown && (
-                  <ul className="absolute left-0 mt-2 w-44 bg-white text-black shadow-lg rounded-md z-50 border border-black">
+                  <ul className="absolute left-0 mt-2 w-44 bg-white text-black shadow-lg rounded-md z-50 border border-black max-h-60 overflow-y-auto">
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
                       <a href="/heartAnatomy">Heart Anatomy</a>
                     </li>
-                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
                       <a href="/heartAnatomy#statement">
                         Statement of objectives
                       </a>
                     </li>
-                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
                       <a href="/heartAnatomy#mediastinum">
                         Gross Anatomy of the Mediastinum
                       </a>
                     </li>
-                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
                       <a href="/heartAnatomy#pericardium">
                         Pericardium and Pericardial Sinuses
                       </a>
                     </li>
-                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
                       <a href="/heartAnatomy#greatVessel">
                         Features of the Heart and Great Vessels
                       </a>
                     </li>
-                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200">
-                      <a href="/heartAnatomy#blood">Vascular Anatomy</a>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartAnatomy#surface">
+                        Surface Anatomy of the Heart and Heart Valves
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartAnatomy#bloodSupply">
+                        Blood Supply of the Heart
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartAnatomy#azygos">
+                        Azygos System and Lymphatic Drainage of the Heart
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartAnatomy#autonomic">
+                        Autonomic Nervous Supply to the Heart
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartAnatomy#microscopic">
+                        Microscopic Anatomy of the Heart
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartAnatomy#anomalies">
+                        Developmental Anatomy and Congenital Anomalies of the
+                        Heart and Vascular Channels
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartAnatomy#dissection">
+                        Dissection of the Thorax: Focus on Cardiovascular
+                        Anatomy
+                      </a>
                     </li>
                   </ul>
                 )}
               </li>
               <li className="relative text-white hover:text-indigo-200">
-                <a href="/heartPhysiology">Cardiovascular Physiology</a>
+                {/* <a href="/heartAnatomy">Cardiovascular Anatomy</a> */}
+                <button
+                  onClick={() => setPhysiologyDropdown(!physiologyDropdown)}
+                  className="focus:outline-none focus:text-indigo-400"
+                >
+                  Cardiovascular Physiology
+                </button>
+                {physiologyDropdown && (
+                  <ul className="absolute left-0 mt-2 w-44 bg-white text-black shadow-lg rounded-md z-50 border border-black max-h-60 overflow-y-auto">
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology">Heart Physiology</a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#statement">
+                        Statement of objectives
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#cardioSystem">
+                        Introduction to the Cardiovascular System
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#cardiacycle">Cardiac Cycle</a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#haemodynamics">Haemodynamics</a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#electricHeart">
+                        Electrical Activities of the Heart
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#heartRate">Heart Rate</a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#bloodPressure">
+                        Blood Pressure
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#hypertension">Hypertension</a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#microscopic">
+                        Microscopic Anatomy of the Heart
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#coronary">
+                        Coronary and Pulmonary Circulation
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#fetal">Fetal Circulation</a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#cerebralCirculation">
+                        Cerebral Circulation
+                      </a>
+                    </li>
+                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                      <a href="/heartPhysiology#cardioFunctions">
+                        Integration of Cardiovascular System Functions
+                      </a>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li className="text-white hover:text-indigo-200">
                 <a href="/labs">Tutorial Stream</a>

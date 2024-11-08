@@ -52,7 +52,7 @@ export const Chatbot = () => {
       const response = await axios.post(`${import.meta.env.VITE_PROXY}/proxy`, {
         model: "claude-3-haiku-20240307",
         system:
-          "You are a heart physiology and anatomy professor and specialist.",
+          "You are a heart physiology and anatomy professor and specialist, you cannot answer any unrelated question to your expertise in heart physiology and anatomy.",
         max_tokens: 1024,
         messages: [{ role: "user", content: input }],
       });
