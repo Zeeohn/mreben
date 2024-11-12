@@ -342,12 +342,12 @@ export const Quiz = () => {
                   Total Score: {score} / {questions.length}
                 </h2>
                 <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-500">
-                  {score <= 10
+                  {score <= 15
                     ? "uh-oh you had a very low score 😱"
-                    : score >= 11 && score <= 19
+                    : score >= 16 && score <= 24
                     ? "Well done! You scored above average 😁"
-                    : score >= 20
-                    ? "Congratulations, you performed well in this test! 🎉"
+                    : score >= 25
+                    ? "Congratulations, you aced this test! 🎉"
                     : "Well done! 🎉"}
                 </p>
               </div>

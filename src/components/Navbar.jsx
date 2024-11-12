@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
@@ -13,6 +13,28 @@ export const Navbar = () => {
   // };
 
   // let picture = sessionStorage.getItem("picture");
+
+  const anatomyRef = useRef(null);
+  const physiologyRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (anatomyRef.current && !anatomyRef.current.contains(event.target)) {
+      setAnatomyDropdown(false);
+    }
+    if (
+      physiologyRef.current &&
+      !physiologyRef.current.contains(event.target)
+    ) {
+      setPhysiologyDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="w-full bg-black shadow">
@@ -78,7 +100,10 @@ export const Navbar = () => {
               <li className="text-white hover:text-indigo-200">
                 <a href="/about">About Us</a>
               </li>
-              <li className="relative text-white hover:text-indigo-200">
+              <li
+                className="relative text-white hover:text-indigo-200"
+                ref={anatomyRef}
+              >
                 {/* <a href="/heartAnatomy">Cardiovascular Anatomy</a> */}
                 <button
                   onClick={() => setAnatomyDropdown(!anatomyDropdown)}
@@ -151,7 +176,10 @@ export const Navbar = () => {
                   </ul>
                 )}
               </li>
-              <li className="relative text-white hover:text-indigo-200">
+              <li
+                className="relative text-white hover:text-indigo-200"
+                ref={physiologyRef}
+              >
                 {/* <a href="/heartAnatomy">Cardiovascular Anatomy</a> */}
                 <button
                   onClick={() => setPhysiologyDropdown(!physiologyDropdown)}
@@ -196,11 +224,11 @@ export const Navbar = () => {
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
                       <a href="/heartPhysiology#hypertension">Hypertension</a>
                     </li>
-                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
+                    {/* <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
                       <a href="/heartPhysiology#microscopic">
                         Microscopic Anatomy of the Heart
                       </a>
-                    </li>
+                    </li> */}
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
                       <a href="/heartPhysiology#coronary">
                         Coronary and Pulmonary Circulation
@@ -223,7 +251,7 @@ export const Navbar = () => {
                 )}
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="/labs">Tutorial Stream</a>
+                <a href="/labs">Gallery</a>
               </li>
               <li className="text-white hover:text-indigo-200">
                 <a href="/quiz">Assessment</a>
