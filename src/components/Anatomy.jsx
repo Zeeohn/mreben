@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import Footer from "./Footer";
@@ -18,14 +18,17 @@ export const Anatomy = () => {
         }
       }, 500);
     } else {
-      setVisibleSection("statement");
+      setVisibleSection("all"); // Show all content if no id selector
     }
   }, [location]);
 
   const renderSection = (id, title, content) => (
     <div
       key={id}
-      style={{ display: visibleSection === id ? "block" : "none" }}
+      style={{
+        display:
+          visibleSection === "all" || visibleSection === id ? "block" : "none",
+      }}
       className="w-full px-4 py-6"
     >
       <h3 className="text-left text-xl font-bold my-4" id={id}>
@@ -123,8 +126,8 @@ export const Anatomy = () => {
                 supplying oxygenated blood to the head, neck, and upper limbs.
                 The superior vena cava, which drains deoxygenated blood from the
                 upper body back to the heart, also traverses this region,
-                underscoring the mediastinum's importance in facilitating blood
-                circulation.
+                underscoring the mediastinum&#39;s importance in facilitating
+                blood circulation.
                 <br />
                 <br />
                 In the posterior mediastinum, the descending aorta continues its
@@ -150,13 +153,13 @@ export const Anatomy = () => {
                 <br />
                 <br />
                 In conclusion, the gross anatomy of the mediastinum is crucial
-                for understanding the cardiovascular system's organization and
-                function. It provides a framework for the heart's placement, the
-                major blood vessels' pathways, and their relationships with
-                surrounding structures. A comprehensive grasp of mediastinal
-                anatomy is vital for healthcare professionals in diagnosing and
-                treating cardiovascular diseases, ultimately contributing to
-                improved patient care and outcomes.
+                for understanding the cardiovascular system&#39;s organization
+                and function. It provides a framework for the heart&#39;s
+                placement, the major blood vessels&#39; pathways, and their
+                relationships with surrounding structures. A comprehensive grasp
+                of mediastinal anatomy is vital for healthcare professionals in
+                diagnosing and treating cardiovascular diseases, ultimately
+                contributing to improved patient care and outcomes.
               </p>
             </>
           )}
@@ -218,7 +221,7 @@ export const Anatomy = () => {
                 cavity, the oblique sinus can become distended, leading to
                 potential complications such as cardiac tamponade, a
                 life-threatening condition where the pressure from the fluid
-                restricts the heart's ability to pump effectively.
+                restricts the heart&#39;s ability to pump effectively.
                 <br />
                 <br />
                 Pathologies affecting the pericardium can significantly impact
@@ -268,7 +271,7 @@ export const Anatomy = () => {
                 <br />
                 <br />
                 The external surface of the heart is marked by grooves known as
-                sulci, which indicate the boundaries between the heart's
+                sulci, which indicate the boundaries between the heart&#39;s
                 chambers. The coronary sulcus, also known as the
                 atrioventricular sulcus, encircles the heart and separates the
                 atria from the ventricles. Additionally, the anterior
@@ -276,7 +279,7 @@ export const Anatomy = () => {
                 separate the left and right ventricles. These sulci house the
                 coronary blood vessels that supply the heart muscle, emphasizing
                 the importance of a well-vascularized surface for optimal
-                cardiac function. The heart's outer appearance is further
+                cardiac function. The heart&#39;s outer appearance is further
                 characterized by its distinct chambers: the right and left atria
                 at the top, which receive blood, and the right and left
                 ventricles at the bottom, which pump blood out of the heart.
@@ -322,10 +325,10 @@ export const Anatomy = () => {
                 systemic circulation.
                 <br />
                 <br />
-                The heart's electrical conduction system, consisting of the
+                The heart&#39;s electrical conduction system, consisting of the
                 sinoatrial (SA) node, atrioventricular (AV) node, bundle of His,
-                and Purkinje fibers, coordinates the heart's contractions. The
-                SA node, located in the right atrium, acts as the natural
+                and Purkinje fibers, coordinates the heart&#39;s contractions.
+                The SA node, located in the right atrium, acts as the natural
                 pacemaker, generating electrical impulses that initiate each
                 heartbeat. These impulses travel through the atria, causing them
                 to contract, and then reach the AV node, where there is a slight
@@ -336,7 +339,7 @@ export const Anatomy = () => {
                 <br />
                 In conclusion, the external and internal features of the heart
                 and great vessels are intricately designed to facilitate
-                efficient blood circulation throughout the body. The heart's
+                efficient blood circulation throughout the body. The heart&#39;s
                 structural characteristics, combined with the functional roles
                 of the great vessels, underscore its significance in maintaining
                 cardiovascular health. Understanding these anatomical features
@@ -364,8 +367,8 @@ export const Anatomy = () => {
                 assess cardiac health effectively. The heart is located in the
                 thoracic cavity, specifically within the mediastinum, and is
                 positioned between the lungs, with its apex directed towards the
-                left side of the chest. The heart's external landmarks can be
-                palpated and visualized, aiding in clinical examinations. The
+                left side of the chest. The heart&#39;s external landmarks can
+                be palpated and visualized, aiding in clinical examinations. The
                 broad base of the heart lies superiorly, while the tapered apex
                 points inferiorly and anteriorly, typically located at the fifth
                 intercostal space, just medial to the midclavicular line. This
@@ -374,7 +377,7 @@ export const Anatomy = () => {
                 placement of central venous catheters.
                 <br />
                 <br />
-                The heart's surface is divided into distinct regions that
+                The heart&#39;s surface is divided into distinct regions that
                 correspond to its four chambers: the right atrium, right
                 ventricle, left atrium, and left ventricle. The anterior surface
                 is primarily formed by the right ventricle, while the left
@@ -426,16 +429,16 @@ export const Anatomy = () => {
                 including valve stenosis or regurgitation.
                 <br />
                 <br />
-                The heart's surface anatomy also includes its associated great
-                vessels, such as the aorta, pulmonary arteries, and venae cavae.
-                The aorta arches from the left ventricle, providing branches
-                that supply oxygenated blood to the upper body and eventually
-                descending through the thorax and abdomen. The superior vena
-                cava and inferior vena cava drain deoxygenated blood from the
-                upper and lower body, respectively, returning it to the right
-                atrium. The relationship between these vessels and the heart is
-                critical for understanding systemic and pulmonary circulation
-                dynamics.
+                The heart&#39;s surface anatomy also includes its associated
+                great vessels, such as the aorta, pulmonary arteries, and venae
+                cavae. The aorta arches from the left ventricle, providing
+                branches that supply oxygenated blood to the upper body and
+                eventually descending through the thorax and abdomen. The
+                superior vena cava and inferior vena cava drain deoxygenated
+                blood from the upper and lower body, respectively, returning it
+                to the right atrium. The relationship between these vessels and
+                the heart is critical for understanding systemic and pulmonary
+                circulation dynamics.
                 <br />
                 <br />
                 In conclusion, the surface anatomy of the heart and its valves
@@ -457,8 +460,8 @@ export const Anatomy = () => {
               <p>
                 The blood supply of the heart is critical for its function,
                 ensuring that the cardiac muscle receives adequate oxygen and
-                nutrients to support its continuous activity. The heart's own
-                blood supply is primarily provided by the coronary arteries,
+                nutrients to support its continuous activity. The heart&#39;s
+                own blood supply is primarily provided by the coronary arteries,
                 which originate from the base of the aorta just above the aortic
                 valve. There are two main coronary arteries: the right coronary
                 artery (RCA) and the left coronary artery (LCA). These arteries
@@ -484,7 +487,7 @@ export const Anatomy = () => {
                 anterior descending artery (LAD) and the left circumflex artery
                 (LCX). The LAD supplies blood to the anterior wall of the left
                 ventricle and the interventricular septum, making it vital for
-                the heart's pumping function. The LCX supplies blood to the
+                the heart&#39;s pumping function. The LCX supplies blood to the
                 lateral and posterior aspects of the left atrium and left
                 ventricle. The extensive branching of the left coronary artery
                 ensures that the anterior and lateral walls of the heart receive
@@ -667,9 +670,9 @@ export const Anatomy = () => {
                 <br />
                 The anatomical relationship between the heart and the autonomic
                 nervous system is crucial for understanding how these nerves
-                influence cardiac function. The heart's sinoatrial node, located
-                in the right atrium, serves as the primary pacemaker. It is
-                richly innervated by both sympathetic and parasympathetic
+                influence cardiac function. The heart&#39;s sinoatrial node,
+                located in the right atrium, serves as the primary pacemaker. It
+                is richly innervated by both sympathetic and parasympathetic
                 fibers, allowing for precise control of heart rhythm. The
                 atrioventricular node, located at the junction of the atria and
                 ventricles, is similarly influenced by autonomic inputs, which
@@ -736,25 +739,27 @@ export const Anatomy = () => {
                 anchoring adjacent cells together, helping the heart withstand
                 the mechanical stress associated with constant contractions.
                 This unique cellular arrangement is vital for maintaining the
-                heart's rhythmic contractions and overall mechanical efficiency.
+                heart&#39;s rhythmic contractions and overall mechanical
+                efficiency.
                 <br />
                 <br />
-                The heart's endocardium, myocardium, and epicardium represent
-                the three primary layers that can be studied microscopically.
-                The endocardium is the innermost layer, composed of a thin layer
-                of endothelial cells that line the heart chambers and valves.
-                This smooth lining reduces friction as blood flows through the
-                heart and serves as a barrier to regulate the movement of
-                substances between the blood and heart tissues. Beneath the
-                endothelium lies a layer of connective tissue that supports the
-                endocardial layer and contains blood vessels and nerves.
+                The heart&#39;s endocardium, myocardium, and epicardium
+                represent the three primary layers that can be studied
+                microscopically. The endocardium is the innermost layer,
+                composed of a thin layer of endothelial cells that line the
+                heart chambers and valves. This smooth lining reduces friction
+                as blood flows through the heart and serves as a barrier to
+                regulate the movement of substances between the blood and heart
+                tissues. Beneath the endothelium lies a layer of connective
+                tissue that supports the endocardial layer and contains blood
+                vessels and nerves.
                 <br />
                 <br />
                 The myocardium, the thickest layer of the heart, is
                 predominantly made up of cardiac muscle cells. This layer is
-                responsible for the heart's contractile function and is highly
-                vascularized to meet the high metabolic demands of the cardiac
-                tissue. The arrangement of muscle fibers is particularly
+                responsible for the heart&#39;s contractile function and is
+                highly vascularized to meet the high metabolic demands of the
+                cardiac tissue. The arrangement of muscle fibers is particularly
                 important; they spiral around the heart, allowing for a more
                 efficient squeezing motion during contraction. This anatomical
                 feature enhances the heart’s ability to eject blood forcefully
@@ -949,7 +954,7 @@ export const Anatomy = () => {
                 <br />
                 Within the mediastinum, the middle compartment houses the heart,
                 which is enveloped in the pericardium. Dissection of the
-                pericardium allows for a detailed examination of the heart's
+                pericardium allows for a detailed examination of the heart&#39;s
                 anatomy, including the right and left atria, right and left
                 ventricles, and associated structures such as the valves and
                 chambers. Understanding the anatomy of the heart is crucial for
@@ -988,12 +993,12 @@ export const Anatomy = () => {
                 autonomic nervous supply to the heart and blood vessels. The
                 vagus nerve and sympathetic cardiac nerves can be identified,
                 which play essential roles in regulating heart rate and vascular
-                tone. Understanding these nerves' anatomical pathways is vital
-                for interpreting their functions and addressing conditions such
-                as arrhythmias or hypertension. The relationships between these
-                nerves and the cardiovascular structures can also illuminate
-                potential sites for interventions in cardiac surgery or the
-                treatment of cardiovascular diseases.
+                tone. Understanding these nerves&#39; anatomical pathways is
+                vital for interpreting their functions and addressing conditions
+                such as arrhythmias or hypertension. The relationships between
+                these nerves and the cardiovascular structures can also
+                illuminate potential sites for interventions in cardiac surgery
+                or the treatment of cardiovascular diseases.
                 <br />
                 <br />
                 In conclusion, the dissection of the thorax is an essential

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -114,63 +114,56 @@ export const Navbar = () => {
                 {anatomyDropdown && (
                   <ul className="absolute left-0 mt-2 w-44 bg-white text-black shadow-lg rounded-md z-50 border border-black max-h-60 overflow-y-auto">
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy">Heart Anatomy</a>
+                      <a href="/heartAnatomy" onClick={() => setAnatomyDropdown(false)}>Statement of objectives</a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#statement">
-                        Statement of objectives
-                      </a>
-                    </li>
-                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#mediastinum">
+                      <a href="/heartAnatomy#mediastinum" onClick={() => setAnatomyDropdown(false)}>
                         Gross Anatomy of the Mediastinum
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#pericardium">
+                      <a href="/heartAnatomy#pericardium" onClick={() => setAnatomyDropdown(false)}>
                         Pericardium and Pericardial Sinuses
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#greatVessel">
+                      <a href="/heartAnatomy#greatVessel" onClick={() => setAnatomyDropdown(false)}>
                         Features of the Heart and Great Vessels
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#surface">
+                      <a href="/heartAnatomy#surface" onClick={() => setAnatomyDropdown(false)}>
                         Surface Anatomy of the Heart and Heart Valves
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#bloodSupply">
+                      <a href="/heartAnatomy#bloodSupply" onClick={() => setAnatomyDropdown(false)}>
                         Blood Supply of the Heart
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#azygos">
+                      <a href="/heartAnatomy#azygos" onClick={() => setAnatomyDropdown(false)}>
                         Azygos System and Lymphatic Drainage of the Heart
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#autonomic">
+                      <a href="/heartAnatomy#autonomic" onClick={() => setAnatomyDropdown(false)}>
                         Autonomic Nervous Supply to the Heart
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#microscopic">
+                      <a href="/heartAnatomy#microscopic" onClick={() => setAnatomyDropdown(false)}>
                         Microscopic Anatomy of the Heart
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#anomalies">
-                        Developmental Anatomy and Congenital Anomalies of the
-                        Heart and Vascular Channels
+                      <a href="/heartAnatomy#anomalies" onClick={() => setAnatomyDropdown(false)}>
+                        Developmental Anatomy and Congenital Anomalies of the Heart and Vascular Channels
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartAnatomy#dissection">
-                        Dissection of the Thorax: Focus on Cardiovascular
-                        Anatomy
+                      <a href="/heartAnatomy#dissection" onClick={() => setAnatomyDropdown(false)}>
+                        Dissection of the Thorax: Focus on Cardiovascular Anatomy
                       </a>
                     </li>
                   </ul>
@@ -190,60 +183,60 @@ export const Navbar = () => {
                 {physiologyDropdown && (
                   <ul className="absolute left-0 mt-2 w-44 bg-white text-black shadow-lg rounded-md z-50 border border-black max-h-60 overflow-y-auto">
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology">Heart Physiology</a>
+                      <a href="/heartPhysiology" onClick={() => setPhysiologyDropdown(false)}>Statement of objectives</a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#statement">
-                        Statement of objectives
-                      </a>
-                    </li>
-                    <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#cardioSystem">
+                      <a href="/heartPhysiology#cardioSystem" onClick={() => setPhysiologyDropdown(false)}>
                         Introduction to the Cardiovascular System
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#cardiacycle">Cardiac Cycle</a>
+                      <a href="/heartPhysiology#cardiacycle" onClick={() => setPhysiologyDropdown(false)}>
+                        Cardiac Cycle
+                      </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#haemodynamics">Haemodynamics</a>
+                      <a href="/heartPhysiology#haemodynamics" onClick={() => setPhysiologyDropdown(false)}>
+                        Haemodynamics
+                      </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#electricHeart">
+                      <a href="/heartPhysiology#electricHeart" onClick={() => setPhysiologyDropdown(false)}>
                         Electrical Activities of the Heart
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#heartRate">Heart Rate</a>
+                      <a href="/heartPhysiology#heartRate" onClick={() => setPhysiologyDropdown(false)}>
+                        Heart Rate
+                      </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#bloodPressure">
+                      <a href="/heartPhysiology#bloodPressure" onClick={() => setPhysiologyDropdown(false)}>
                         Blood Pressure
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#hypertension">Hypertension</a>
-                    </li>
-                    {/* <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#microscopic">
-                        Microscopic Anatomy of the Heart
+                      <a href="/heartPhysiology#hypertension" onClick={() => setPhysiologyDropdown(false)}>
+                        Hypertension
                       </a>
-                    </li> */}
+                    </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#coronary">
+                      <a href="/heartPhysiology#coronary" onClick={() => setPhysiologyDropdown(false)}>
                         Coronary and Pulmonary Circulation
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#fetal">Fetal Circulation</a>
+                      <a href="/heartPhysiology#fetal" onClick={() => setPhysiologyDropdown(false)}>
+                        Fetal Circulation
+                      </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#cerebralCirculation">
+                      <a href="/heartPhysiology#cerebralCirculation" onClick={() => setPhysiologyDropdown(false)}>
                         Cerebral Circulation
                       </a>
                     </li>
                     <li className="px-4 py-2 hover:rounded-md hover:bg-gray-200 border-b border-b-black">
-                      <a href="/heartPhysiology#cardioFunctions">
+                      <a href="/heartPhysiology#cardioFunctions" onClick={() => setPhysiologyDropdown(false)}>
                         Integration of Cardiovascular System Functions
                       </a>
                     </li>

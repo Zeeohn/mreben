@@ -78,17 +78,17 @@ function Footer() {
               </a>
               <a href="/heartAnatomy">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
-                  Heart Anatomy
+                  Cardiovascular Anatomy
                 </p>
               </a>
               <a href="/heartPhysiology">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
-                  Heart Physiology
+                  Cardiovascular Physiology
                 </p>
               </a>
               <a href="/labs">
                 <p className="text-[16px] hover:text-indigo-600 cursor-pointer text-[#646464] font-medium hover:font-bold">
-                  Tutorial Stream
+                  Gallery
                 </p>
               </a>
               <a href="/quiz">

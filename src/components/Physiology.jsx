@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import Footer from "./Footer";
@@ -19,14 +19,17 @@ export const Physiology = () => {
         }
       }, 500);
     } else {
-      setVisibleSection("statement");
+      setVisibleSection("all");
     }
   }, [location]);
 
   const renderSection = (id, title, content) => (
     <div
       key={id}
-      style={{ display: visibleSection === id ? "block" : "none" }}
+      style={{
+        display:
+          visibleSection === "all" || visibleSection === id ? "block" : "none",
+      }}
       className="w-full px-4 py-6"
     >
       <h3 className="text-left text-xl font-bold my-4" id={id}>
@@ -57,12 +60,12 @@ export const Physiology = () => {
               The objective of this study is to provide a comprehensive
               exploration of the fundamental concepts and mechanisms underlying
               cardiovascular biology. This includes a detailed examination of
-              the cardiovascular system's structure and function, encompassing
-              the intricate processes involved in the cardiac cycle,
-              hemodynamics, electrical activities of the heart, heart rate,
-              blood pressure, hypertension, coronary and pulmonary circulation,
-              fetal circulation, cerebral circulation, and the integration of
-              cardiovascular system functions.
+              the cardiovascular system&#39;s structure and function,
+              encompassing the intricate processes involved in the cardiac
+              cycle, hemodynamics, electrical activities of the heart, heart
+              rate, blood pressure, hypertension, coronary and pulmonary
+              circulation, fetal circulation, cerebral circulation, and the
+              integration of cardiovascular system functions.
             </p>
             <div className="py-3 flex items-center justify-center">
               <img
@@ -101,7 +104,7 @@ export const Physiology = () => {
               ensuring blood flows in one direction without backtracking. The
               heart beats rhythmically due to electrical signals that originate
               in a specialized area called the sinoatrial (SA) node, often
-              referred to as the "natural pacemaker" of the heart.
+              referred to as the &#34;natural pacemaker&#34; of the heart.
               <br />
               <br />
               The blood vessels are the pathways through which blood travels.
@@ -168,7 +171,7 @@ export const Physiology = () => {
               wastes. The cardiac cycle can be broadly divided into two main
               phases: systole, when the heart muscle contracts, and diastole,
               when the heart muscle relaxes. Each phase plays a pivotal role in
-              the heart's ability to function effectively as a pump.
+              the heart&#39;s ability to function effectively as a pump.
               <br />
               <br />
               During systole, the heart actively ejects blood from its chambers.
@@ -214,11 +217,11 @@ export const Physiology = () => {
               <br />
               <br />
               The electrical activity that coordinates the cardiac cycle
-              originates from the heart's intrinsic conduction system. The
+              originates from the heart&#39;s intrinsic conduction system. The
               sinoatrial (SA) node, located in the right atrium, acts as the
-              heart's natural pacemaker by generating electrical impulses that
-              initiate the heartbeat. These impulses travel through the atria,
-              causing atrial contraction. The signal then reaches the
+              heart&#39;s natural pacemaker by generating electrical impulses
+              that initiate the heartbeat. These impulses travel through the
+              atria, causing atrial contraction. The signal then reaches the
               atrioventricular (AV) node, where it is delayed briefly to ensure
               that the atria have time to empty into the ventricles before
               ventricular contraction begins. Following this delay, the impulse
@@ -355,15 +358,15 @@ export const Physiology = () => {
               by its electrical activities, which ensure that contractions occur
               in a coordinated and rhythmic manner. This intricate electrical
               system is responsible for generating and propagating electrical
-              impulses that trigger the heart's contractions, allowing it to
+              impulses that trigger the heart&#39;s contractions, allowing it to
               efficiently pump blood throughout the body. Understanding the
               electrical activities of the heart is crucial for diagnosing and
               treating various cardiovascular conditions, including arrhythmias
               and heart failure.
               <br />
               <br />
-              At the core of the heart's electrical system is the sinoatrial
-              (SA) node, often referred to as the heart's natural pacemaker.
+              At the core of the heart&#39;s electrical system is the sinoatrial
+              (SA) node, often referred to as the heart&#39;s natural pacemaker.
               Located in the right atrium, the SA node generates electrical
               impulses spontaneously due to its unique pacemaker cells, which
               have the ability to depolarize automatically. This intrinsic
@@ -410,14 +413,15 @@ export const Physiology = () => {
               The electrical activities of the heart can be monitored and
               assessed through an electrocardiogram (ECG or EKG), a diagnostic
               tool that records the electrical impulses as they travel through
-              the heart. The ECG provides valuable information about the heart's
-              rhythm, rate, and electrical activity, helping to identify
-              arrhythmias, ischemic heart disease, and other cardiac conditions.
-              Key components of an ECG include the P wave (representing atrial
-              depolarization), the QRS complex (representing ventricular
-              depolarization), and the T wave (representing ventricular
-              repolarization). Abnormalities in these waves can indicate various
-              heart conditions, guiding clinical decisions and interventions.
+              the heart. The ECG provides valuable information about the
+              heart&#39;s rhythm, rate, and electrical activity, helping to
+              identify arrhythmias, ischemic heart disease, and other cardiac
+              conditions. Key components of an ECG include the P wave
+              (representing atrial depolarization), the QRS complex
+              (representing ventricular depolarization), and the T wave
+              (representing ventricular repolarization). Abnormalities in these
+              waves can indicate various heart conditions, guiding clinical
+              decisions and interventions.
               <br />
               <br />
               Understanding the electrical activities of the heart is vital for
@@ -444,7 +448,7 @@ export const Physiology = () => {
             <p>
               Heart rate, defined as the number of times the heart beats per
               minute (bpm), is a vital physiological parameter that reflects the
-              heart's efficiency and overall cardiovascular health. It is an
+              heart&#39;s efficiency and overall cardiovascular health. It is an
               essential measure of cardiac function, providing insights into the
               body’s metabolic demands and the effectiveness of the
               cardiovascular system in responding to various stimuli. Normal
@@ -463,7 +467,7 @@ export const Physiology = () => {
               vagus nerve, slows the heart rate during rest and relaxation.
               Additionally, hormones such as adrenaline (epinephrine) released
               during stress can significantly elevate heart rate, preparing the
-              body for a "fight or flight" response.
+              body for a &#34;fight or flight&#34; response.
               <br />
               <br />
               Age and fitness level also play critical roles in determining
@@ -526,14 +530,15 @@ export const Physiology = () => {
               Blood pressure (BP) is a critical physiological measure that
               reflects the force exerted by circulating blood against the walls
               of blood vessels, primarily arteries. It is a vital sign that
-              provides essential information about the cardiovascular system's
-              health and functionality. Blood pressure is typically expressed in
-              millimeters of mercury (mmHg) and recorded as two values: systolic
-              blood pressure (the pressure in the arteries during ventricular
-              contraction) and diastolic blood pressure (the pressure in the
-              arteries during ventricular relaxation). A normal blood pressure
-              reading for a healthy adult is generally around 120/80 mmHg,
-              though variations can occur based on individual factors.
+              provides essential information about the cardiovascular
+              system&#39;s health and functionality. Blood pressure is typically
+              expressed in millimeters of mercury (mmHg) and recorded as two
+              values: systolic blood pressure (the pressure in the arteries
+              during ventricular contraction) and diastolic blood pressure (the
+              pressure in the arteries during ventricular relaxation). A normal
+              blood pressure reading for a healthy adult is generally around
+              120/80 mmHg, though variations can occur based on individual
+              factors.
               <br />
               <br />
               The regulation of blood pressure is a complex interplay between
@@ -575,8 +580,8 @@ export const Physiology = () => {
               diseases, including heart attack, stroke, and kidney disease.
               <br />
               <br />
-              Hypertension is often asymptomatic, earning it the title "the
-              silent killer." It can be categorized into primary (essential)
+              Hypertension is often asymptomatic, earning it the title &#34;the
+              silent killer.&#34; It can be categorized into primary (essential)
               hypertension, which has no identifiable cause, and secondary
               hypertension, which results from underlying health issues such as
               kidney disease, hormonal disorders, or certain medications.
@@ -626,7 +631,7 @@ export const Physiology = () => {
               sedentary lifestyle, high salt intake, and chronic stress. On the
               other hand, secondary hypertension is caused by specific
               underlying conditions, such as kidney disease, hormonal disorders
-              (like hyperaldosteronism or Cushing's syndrome), and certain
+              (like hyperaldosteronism or Cushing&#39;s syndrome), and certain
               medications. Identifying the underlying cause is crucial for
               effective treatment and management.
               <br />
@@ -769,7 +774,7 @@ export const Physiology = () => {
               <br />
               <br />
               In summary, both coronary and pulmonary circulation play critical
-              roles in maintaining the heart's function and overall
+              roles in maintaining the heart&#39;s function and overall
               cardiovascular health. A thorough understanding of these
               circulatory pathways is essential for identifying potential health
               risks and developing effective treatment strategies. By
@@ -846,8 +851,8 @@ export const Physiology = () => {
               Additionally, the ductus arteriosus constricts and eventually
               becomes the ligamentum arteriosum, further redirecting blood flow
               to the lungs. These changes mark the transition from fetal to
-              postnatal circulation, ensuring that the newborn's heart and lungs
-              can work together efficiently.
+              postnatal circulation, ensuring that the newborn&#39;s heart and
+              lungs can work together efficiently.
               <br />
               <br />
               Understanding fetal circulation is essential for recognizing
@@ -883,9 +888,9 @@ export const Physiology = () => {
               supply blood to the brain, ensuring it receives adequate oxygen
               and nutrients necessary for its proper functioning. The brain,
               despite comprising only about 2% of the body’s total weight,
-              consumes roughly 20% of the body's oxygen supply and glucose,
+              consumes roughly 20% of the body&#39;s oxygen supply and glucose,
               highlighting the critical importance of efficient cerebral blood
-              flow. The brain's reliance on a consistent and well-regulated
+              flow. The brain&#39;s reliance on a consistent and well-regulated
               blood supply underscores the need for a robust circulatory system
               to maintain neurological health and prevent ischemic events, such
               as strokes.
@@ -969,17 +974,18 @@ export const Physiology = () => {
               throughout the body. The integration of cardiovascular functions
               is essential not only for sustaining life but also for adapting to
               changing physiological demands, such as during exercise, stress,
-              or illness. This sophisticated interplay ensures that the body's
-              tissues receive the necessary support to function optimally.
+              or illness. This sophisticated interplay ensures that the
+              body&#39;s tissues receive the necessary support to function
+              optimally.
               <br />
               <br />
               At the core of cardiovascular integration is the heart, which
               serves as the central pump responsible for maintaining blood
-              circulation. The heart's rhythmic contractions are regulated by
-              intrinsic electrical activity generated by specialized cells in
+              circulation. The heart&#39;s rhythmic contractions are regulated
+              by intrinsic electrical activity generated by specialized cells in
               the sinoatrial (SA) node. This electrical conduction system
               coordinates the timing of heartbeats, ensuring that blood is
-              effectively pumped into the arteries. The heart's ability to
+              effectively pumped into the arteries. The heart&#39;s ability to
               adjust its rate and force of contraction is crucial for meeting
               varying metabolic demands, allowing for an increase in cardiac
               output during physical activity or stress and a decrease during
@@ -987,8 +993,8 @@ export const Physiology = () => {
               <br />
               <br />
               Blood vessels, including arteries, veins, and capillaries, are
-              integral to the cardiovascular system's function, facilitating the
-              distribution of blood throughout the body. The structural and
+              integral to the cardiovascular system&#39;s function, facilitating
+              the distribution of blood throughout the body. The structural and
               functional properties of these vessels enable them to regulate
               blood flow and pressure dynamically. For instance, smooth muscle
               cells within the arterial walls can constrict or dilate in
@@ -1022,14 +1028,14 @@ export const Physiology = () => {
               while simultaneously redirecting blood away from non-essential
               areas, such as the digestive system. This dynamic adjustment is
               orchestrated by the autonomic nervous system, which modulates the
-              heart's activity and vascular tone to optimize performance and
-              maintain homeostasis.
+              heart&lsquo;s activity and vascular tone to optimize performance
+              and maintain homeostasis.
               <br />
               <br />
               Pathophysiological conditions can disrupt the integration of
               cardiovascular functions, leading to cardiovascular diseases such
               as hypertension, heart failure, and atherosclerosis. These
-              conditions can impair the heart's ability to pump effectively,
+              conditions can impair the heart&#39;s ability to pump effectively,
               disrupt normal vascular tone, and hinder the systemic coordination
               necessary for optimal organ function. Understanding the
               integration of cardiovascular system functions is critical for

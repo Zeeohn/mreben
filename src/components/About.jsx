@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar } from "./Navbar";
 import Footer from "./Footer";
 
@@ -7,7 +6,7 @@ export const About = () => {
     <div>
       <Navbar />
       <div className="flex justify-center items-center flex-col">
-        <div className="w-full h-[40vh] md:h-[60vh] bg-[url('https://res.cloudinary.com/ddbtxfsfk/image/upload/f_auto,q_auto/denm759f8z2x6kheiead')] bg-cover bg-center flex-nowrap">
+        <div className="w-full h-[40vh] md:h-[60vh] bg-[url('http://res.cloudinary.com/ddbtxfsfk/image/upload/v1750612428/x9ylfhxatuofcc6bzlk3.jpg')] bg-cover bg-center flex-nowrap">
           <div className="w-full h-full flex justify-center items-center backdrop-brightness-50">
             <span className="text-white md:text-7xl text-3xl font-bold w-1/2 -mx-4">
               About Us
