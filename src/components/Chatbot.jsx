@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 import { Navbar } from "./Navbar";
 import Footer from "./Footer";
 
@@ -40,97 +41,29 @@ export const Chatbot = () => {
     // Add user's message to the messages array
     const userMessage = { role: "user", content: input };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
-    
-    // Add an empty assistant message that will be streamed into
-    const assistantMessageId = Date.now();
-    setMessages((prevMessages) => [
-      ...prevMessages, 
-      { id: assistantMessageId, role: "assistant", content: "" }
-    ]);
-    
+
     setLoading(true);
-    
+
     try {
-      // Use fetch instead of axios for streaming support
-      const response = await fetch(`${import.meta.env.VITE_PROXY}/proxy`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: "claude-3-haiku-20240307",
-          system:
-            "You are an expert specializing in cardiovascular physiology and anatomy. Your main role is to respond to queries by people on your field of specialty. You must follow this rules before responding - RULES: 1. If the question seems vague, create five alternatives of the question similar to the original question and select the best with which you would provide a response to. 2. Classify the question asked as one of these two categories - 'Field related' and 'Not Field related', where the  'Field related' category represents questions that are within your professional experience and specialty and 'Not Field related' category represents questions that are unrelated to your specialty and professional experience. 3. For questions that are classified into 'Field related', ensure to answer in a way that is simple to understand without compromising on many important medical terminologies. 4. For questions classified as 'Not Field related', you must decline to respond since you know nothing about it and it is not within your specialty. i.e I cannot answer this question but I'm happy to respond to questions in the field of heart physiology and anatomy. NOTES: 1. You can only output the relevant responses to the questions asked and you cannot output the field you categorized the question into 2. You cannot also output the variants of the responses you created for a vague question. 3. Ensure to be extremely strict with the rules.",
-          max_tokens: 1024,
-          temperature: 0.3,
-          messages: [{ role: "user", content: input }],
-          stream: true // Enable streaming response
-        }),
+      const response = await axios.post(`${import.meta.env.VITE_PROXY}/proxy`, {
+        model: "claude-3-haiku-20240307",
+        system:
+          "You are an expert specializing in cardiovascular physiology and anatomy. Your main role is to respond to queries by people on your field of specialty. You must follow this rules before responding - RULES: 1. If the question seems vague, create five alternatives of the question similar to the original question and select the best with which you would provide a response to. 2. Classify the question asked as one of these two categories - 'Field related' and 'Not Field related', where the  'Field related' category represents questions that are within your professional experience and specialty and 'Not Field related' category represents questions that are unrelated to your specialty and professional experience. 3. For questions that are classified into 'Field related', ensure to answer in a way that is simple to understand without compromising on many important medical terminologies. 4. For questions classified as 'Not Field related', you must decline to respond since you know nothing about it and it is not within your specialty. i.e I cannot answer this question but I'm happy to respond to questions in the field of heart physiology and anatomy. NOTES: 1. You can only output the relevant responses to the questions asked and you cannot output the field you categorized the question into 2. You cannot also output the variants of the responses you created for a vague question. 3. Ensure to be extremely strict with the rules.",
+        max_tokens: 1024,
+        temperature: 0.3,
+        messages: [{ role: "user", content: input }],
       });
-      
-      // Get the reader from the response body
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let accumulatedResponse = "";
-      
-      // Process the stream
-      let keepReading = true;
-      while (keepReading) {
-        const { done, value } = await reader.read();
-        if (done) {
-          keepReading = false;
-          break;
-        }
-        
-        // Decode the chunk and accumulate the response
-        const chunk = decoder.decode(value, { stream: true });
-        
-        try {
-          // Split the chunk by newlines to handle multiple events
-          const lines = chunk.split('\n').filter(line => line.trim() !== '');
-          
-          for (const line of lines) {
-            // Handle SSE format - lines start with "data: "
-            if (line.startsWith('data: ')) {
-              const data = line.substring(6);
-              
-              // Skip the [DONE] message
-              if (data === '[DONE]') continue;
-              
-              // Parse the JSON data
-              try {
-                const parsedData = JSON.parse(data);
-                if (parsedData.content && parsedData.content[0] && parsedData.content[0].text) {
-                  const newText = parsedData.content[0].text;
-                  accumulatedResponse += newText;
-                  
-                  // Update the message in the messages array
-                  setMessages(prevMessages => 
-                    prevMessages.map(msg => 
-                      msg.id === assistantMessageId 
-                        ? { ...msg, content: accumulatedResponse } 
-                        : msg
-                    )
-                  );
-                }
-              } catch (e) {
-                console.error("Error parsing JSON data:", e, data);
-              }
-            }
-          }
-        } catch (e) {
-          console.error("Error processing chunk:", e);
-        }
-      }
-      
+
+      const assistantMessage = {
+        role: "assistant",
+        content: response.data.content[0].text,
+      };
+
+      setMessages((prevMessages) => [...prevMessages, assistantMessage]);
     } catch (error) {
       console.error("Error fetching response:", error);
+      // setMessages((prevMessages) => [...prevMessages, { role: "assistant", content: "There was an error processing your message. Please try again." }]);
       alert("There was an error processing your message. Please try again.");
-      
-      // Remove the empty assistant message if there was an error
-      setMessages(prevMessages => 
-        prevMessages.filter(msg => msg.id !== assistantMessageId)
-      );
     } finally {
       setLoading(false);
       setInput("");
@@ -152,7 +85,7 @@ export const Chatbot = () => {
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.map((message, index) => (
               <div
-                key={message.id || index}
+                key={index}
                 className={`p-3 rounded-lg max-w-lg ${
                   message.role === "user"
                     ? "bg-blue-500 text-white text-left"

@@ -309,29 +309,31 @@ export const Quiz = () => {
 
   // Function to randomize options positions for all questions
   const randomizeQuestions = () => {
-    const shuffledQuestions = questions.map(question => {
+    const shuffledQuestions = questions.map((question) => {
       // Create pairs of options with their original index to track correct answer
-      const optionPairs = question.options.map(option => ({
+      const optionPairs = question.options.map((option) => ({
         option,
-        isCorrect: option === question.answer
+        isCorrect: option === question.answer,
       }));
 
       // Shuffle the options
       const shuffledOptions = shuffleArray(optionPairs);
-      
+
       // Extract just the option text for display
-      const newOptions = shuffledOptions.map(pair => pair.option);
-      
+      const newOptions = shuffledOptions.map((pair) => pair.option);
+
       // Find the new correct answer position
-      const correctAnswer = shuffledOptions.find(pair => pair.isCorrect).option;
-      
+      const correctAnswer = shuffledOptions.find(
+        (pair) => pair.isCorrect
+      ).option;
+
       return {
         ...question,
         options: newOptions,
-        answer: correctAnswer
+        answer: correctAnswer,
       };
     });
-    
+
     setRandomizedQuestions(shuffledQuestions);
   };
 
