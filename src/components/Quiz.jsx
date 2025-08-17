@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navbar } from "./Navbar";
 import Footer from "./Footer";
-import quizData from "../config/quiz.json";
 import QuizQuestion from "./Questions";
 
 const questions = [
@@ -296,6 +295,51 @@ export const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(1);
   const [score, setScore] = useState(0);
   const [showFinalScore, setShowFinalScore] = useState(false);
+  const [randomizedQuestions, setRandomizedQuestions] = useState([]);
+
+  // Function to shuffle array (Fisher-Yates algorithm)
+  const shuffleArray = (array) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  };
+
+  // Function to randomize options positions for all questions
+  const randomizeQuestions = () => {
+    const shuffledQuestions = questions.map(question => {
+      // Create pairs of options with their original index to track correct answer
+      const optionPairs = question.options.map(option => ({
+        option,
+        isCorrect: option === question.answer
+      }));
+
+      // Shuffle the options
+      const shuffledOptions = shuffleArray(optionPairs);
+      
+      // Extract just the option text for display
+      const newOptions = shuffledOptions.map(pair => pair.option);
+      
+      // Find the new correct answer position
+      const correctAnswer = shuffledOptions.find(pair => pair.isCorrect).option;
+      
+      return {
+        ...question,
+        options: newOptions,
+        answer: correctAnswer
+      };
+    });
+    
+    setRandomizedQuestions(shuffledQuestions);
+  };
+
+  // Initialize randomized questions on first render and when reset
+  useEffect(() => {
+    randomizeQuestions();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Handler for selecting an answer
   const handleAnswerSelect = (isCorrect) => {
@@ -304,7 +348,7 @@ export const Quiz = () => {
     }
 
     const nextQuestion = currentQuestionIndex + 1;
-    if (nextQuestion < questions.length) {
+    if (nextQuestion < randomizedQuestions.length) {
       setCurrentQuestionIndex(nextQuestion);
     } else {
       setShowFinalScore(true);
@@ -315,6 +359,7 @@ export const Quiz = () => {
     setCurrentQuestionIndex(1);
     setScore(0);
     setShowFinalScore(false);
+    randomizeQuestions(); // Randomize questions again on reset
   };
 
   return (
@@ -331,7 +376,7 @@ export const Quiz = () => {
             }`}
           >
             <p className="text-xl font-bold text-white">
-              Question {currentQuestionIndex} of {questions.length}
+              Question {currentQuestionIndex} of {randomizedQuestions.length}
             </p>
           </div>
 
@@ -339,7 +384,7 @@ export const Quiz = () => {
             <>
               <div className="final-score">
                 <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-500">
-                  Total Score: {score} / {questions.length}
+                  Total Score: {score} / {randomizedQuestions.length}
                 </h2>
                 <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-500">
                   {score <= 15
@@ -364,10 +409,12 @@ export const Quiz = () => {
               <h2 className="font-bold text-lg bg-black text-white py-2 mb-3 flex justify-center items-center md:w-1/2 mx-auto">
                 Current Score: {score}
               </h2>
-              <QuizQuestion
-                question={questions[currentQuestionIndex]}
-                onAnswerSelect={handleAnswerSelect}
-              />
+              {randomizedQuestions.length > 0 && (
+                <QuizQuestion
+                  question={randomizedQuestions[currentQuestionIndex]}
+                  onAnswerSelect={handleAnswerSelect}
+                />
+              )}
             </>
           )}
         </div>

@@ -95,7 +95,7 @@ export const Home = () => {
           <div className="mt-8 md:mt-0 md:flex md:justify-center">
             <a
               href="/heartAnatomy"
-              className="text-xl font-medium text-purple-600 transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
+              className="text-xl font-medium text-white transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
             >
               Learn more about the Heart Anatomy
               <svg
@@ -117,7 +117,7 @@ export const Home = () => {
           <div className="mt-8 md:mt-0 md:flex md:justify-center">
             <a
               href="/heartPhysiology"
-              className="text-xl font-medium text-purple-600 transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
+              className="text-xl font-medium text-white transition-colors duration-200 hover:text-green-400 hover:underline xl:text-2xl px-4 py-3 rounded-lg bg-black flex items-center md:justify-center"
             >
               Learn more about the Heart Physiology
               <svg
