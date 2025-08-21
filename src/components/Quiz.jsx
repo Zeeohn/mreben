@@ -289,6 +289,442 @@ const questions = [
     ],
     answer: "Thoracic dissection",
   },
+  {
+    question: "The middle mediastinum contains which major organ?",
+    options: ["Lungs", "Heart", "Esophagus", "Trachea"],
+    answer: "Heart",
+  },
+  {
+    question:
+      "The fibrous pericardium is attached inferiorly to which structure?",
+    options: ["Pleura", "Sternum", "Diaphragm", "Thoracic duct"],
+    answer: "Diaphragm",
+  },
+  {
+    question: "The pericardial cavity normally contains:",
+    options: ["Blood", "Lymph", "Pericardial fluid", "Plasma"],
+    answer: "Pericardial fluid",
+  },
+  {
+    question: "The coronary sulcus separates which heart structures?",
+    options: [
+      "Right and left atria",
+      "Atria and ventricles",
+      "Right and left ventricles",
+      "Pulmonary trunk and aorta",
+    ],
+    answer: "Atria and ventricles",
+  },
+  {
+    question:
+      "The transverse pericardial sinus lies between which major structures?",
+    options: [
+      "Left atrium and left ventricle",
+      "Pulmonary veins and inferior vena cava",
+      "Ascending aorta & pulmonary trunk in front, superior vena cava behind",
+      "Right atrium and right ventricle",
+    ],
+    answer:
+      "Ascending aorta & pulmonary trunk in front, superior vena cava behind",
+  },
+  {
+    question: "The oblique pericardial sinus is clinically important because:",
+    options: [
+      "It allows direct access to the coronary arteries",
+      "It is a site for fluid accumulation during pericardial effusion",
+      "It separates the atria from the ventricles",
+      "It prevents backflow of blood",
+    ],
+    answer: "It is a site for fluid accumulation during pericardial effusion",
+  },
+  {
+    question: "The left coronary artery typically divides into:",
+    options: [
+      "Posterior descending & marginal arteries",
+      "Left anterior descending & circumflex arteries",
+      "Right marginal & diagonal arteries",
+      "Coronary sinus & vena cordis",
+    ],
+    answer: "Left anterior descending & circumflex arteries",
+  },
+  {
+    question: "The great cardiac vein drains primarily into which vessel?",
+    options: [
+      "Superior vena cava",
+      "Coronary sinus",
+      "Pulmonary vein",
+      "Inferior vena cava",
+    ],
+    answer: "Coronary sinus",
+  },
+  {
+    question: "Which chamber forms the apex of the heart?",
+    options: [
+      "Right atrium",
+      "Left atrium",
+      "Right ventricle",
+      "Left ventricle",
+    ],
+    answer: "Left ventricle",
+  },
+  {
+    question: "Papillary muscles are connected to valve cusps by:",
+    options: [
+      "Trabeculae carneae",
+      "Chordae tendineae",
+      "Crista terminalis",
+      "Pectinate muscles",
+    ],
+    answer: "Chordae tendineae",
+  },
+  {
+    question:
+      "The interventricular sulci on the surface of the heart mark the position of:",
+    options: [
+      "Atrioventricular valves",
+      "Coronary arteries",
+      "Interventricular septum",
+      "Foramen ovale",
+    ],
+    answer: "Interventricular septum",
+  },
+  {
+    question:
+      "The vagus nerve provides parasympathetic fibers mainly to which nodes?",
+    options: [
+      "SA node and AV node",
+      "AV node and Bundle of His",
+      "Purkinje fibers and AV node",
+      "SA node and coronary arteries",
+    ],
+    answer: "SA node and AV node",
+  },
+  {
+    question: "Intercalated discs of cardiac muscle contain:",
+    options: [
+      "Sarcomeres and troponin",
+      "Desmosomes and gap junctions",
+      "Elastic fibers and tight junctions",
+      "Mitochondria and t-tubules",
+    ],
+    answer: "Desmosomes and gap junctions",
+  },
+  {
+    question: "A defect in closure of the ductus arteriosus results in:",
+    options: [
+      "Patent ductus arteriosus",
+      "Tetralogy of Fallot",
+      "Coarctation of the aorta",
+      "Atrial septal defect",
+    ],
+    answer: "Patent ductus arteriosus",
+  },
+  {
+    question: "The accessory hemiazygos vein drains into which vessel?",
+    options: [
+      "Superior vena cava",
+      "Left atrium",
+      "Azygos vein",
+      "Coronary sinus",
+    ],
+    answer: "Azygos vein",
+  },
+  {
+    question: "The cardiac plexus is located near the:",
+    options: [
+      "Left atrium",
+      "Base of the heart",
+      "Apex of the heart",
+      "Coronary sinus",
+    ],
+    answer: "Base of the heart",
+  },
+  {
+    question: "The coronary arteries originate from:",
+    options: [
+      "Right atrium",
+      "Left atrium",
+      "Ascending aorta",
+      "Pulmonary artery",
+    ],
+    answer: "Ascending aorta",
+  },
+  {
+    question: "Which vein drains the lateral wall of the left ventricle?",
+    options: [
+      "Middle cardiac vein",
+      "Great cardiac vein",
+      "Posterior vein of the left ventricle",
+      "Small cardiac vein",
+    ],
+    answer: "Posterior vein of the left ventricle",
+  },
+  {
+    question: "The most muscular chamber of the heart is the:",
+    options: [
+      "Right atrium",
+      "Right ventricle",
+      "Left atrium",
+      "Left ventricle",
+    ],
+    answer: "Left ventricle",
+  },
+  {
+    question:
+      "Which congenital heart defect is characterized by four combined abnormalities?",
+    options: [
+      "Atrial septal defect",
+      "Patent ductus arteriosus",
+      "Tetralogy of Fallot",
+      "Ventricular septal defect",
+    ],
+    answer: "Tetralogy of Fallot",
+  },
+  {
+    question: "Coarctation of the aorta refers to:",
+    options: [
+      "Dilation of the aorta",
+      "Narrowing of the aorta",
+      "Displacement of the aorta",
+      "Rupture of the aorta",
+    ],
+    answer: "Narrowing of the aorta",
+  },
+  {
+    question:
+      "The heart is located in which subdivision of the thoracic cavity?",
+    options: ["Pleural cavity", "Mediastinum", "Costal cavity", "Peritoneum"],
+    answer: "Mediastinum",
+  },
+  {
+    question: "The coronary sinus opens into which chamber of the heart?",
+    options: [
+      "Left atrium",
+      "Right atrium",
+      "Left ventricle",
+      "Right ventricle",
+    ],
+    answer: "Right atrium",
+  },
+  {
+    question: "The internal lining of the heart chambers is called the:",
+    options: ["Myocardium", "Pericardium", "Endocardium", "Epicardium"],
+    answer: "Endocardium",
+  },
+  {
+    question: "The bundle of His is located in which structure?",
+    options: [
+      "Atrial wall",
+      "Interventricular septum",
+      "Left ventricle",
+      "Right atrium",
+    ],
+    answer: "Interventricular septum",
+  },
+  {
+    question: "The average duration of a complete cardiac cycle at rest is:",
+    options: ["0.4 seconds", "0.6 seconds", "0.8 seconds", "1.2 seconds"],
+    answer: "0.8 seconds",
+  },
+  {
+    question: "Which valves close at the beginning of ventricular systole?",
+    options: [
+      "Semilunar valves",
+      "Atrioventricular valves",
+      "Mitral and aortic valves",
+      "Pulmonary and aortic valves",
+    ],
+    answer: "Atrioventricular valves",
+  },
+  {
+    question: "The Frank–Starling law states that:",
+    options: [
+      "Increased afterload decreases cardiac output",
+      "Increased preload increases force of contraction",
+      "Decreased heart rate increases stroke volume",
+      "Blood viscosity determines heart rate",
+    ],
+    answer: "Increased preload increases force of contraction",
+  },
+  {
+    question: "Peripheral resistance is mainly determined by:",
+    options: [
+      "Blood pressure",
+      "Blood viscosity",
+      "Vessel diameter",
+      "Capillary density",
+    ],
+    answer: "Vessel diameter",
+  },
+  {
+    question: "A normal resting heart rate in adults is typically:",
+    options: ["20–40 bpm", "40–60 bpm", "60–100 bpm", "100–140 bpm"],
+    answer: "60–100 bpm",
+  },
+  {
+    question: "Heart rate variability (HRV) is an indicator of:",
+    options: [
+      "Stroke volume",
+      "Autonomic balance",
+      "Blood viscosity",
+      "Cardiac hypertrophy",
+    ],
+    answer: "Autonomic balance",
+  },
+  {
+    question: "The first heart sound (S1) is due to closure of:",
+    options: [
+      "Semilunar valves",
+      "Atrioventricular valves",
+      "Aortic valve",
+      "Pulmonary valve",
+    ],
+    answer: "Atrioventricular valves",
+  },
+  {
+    question: "The second heart sound (S2) corresponds to closure of:",
+    options: [
+      "AV valves",
+      "Mitral valve only",
+      "Semilunar valves",
+      "Coronary sinus",
+    ],
+    answer: "Semilunar valves",
+  },
+  {
+    question:
+      "Which part of the ECG corresponds to ventricular repolarization?",
+    options: ["P wave", "QRS complex", "T wave", "U wave"],
+    answer: "T wave",
+  },
+  {
+    question:
+      "The hormone renin indirectly increases blood pressure by activating:",
+    options: [
+      "Insulin secretion",
+      "Renin–angiotensin–aldosterone system (RAAS)",
+      "Sympathetic nerves directly",
+      "ADH breakdown",
+    ],
+    answer: "Renin–angiotensin–aldosterone system (RAAS)",
+  },
+  {
+    question:
+      "Which circulation delivers blood to the lungs for oxygen exchange?",
+    options: ["Pulmonary", "Coronary", "Cerebral", "Systemic"],
+    answer: "Pulmonary",
+  },
+  {
+    question: "Which fetal shunt connects the pulmonary artery to the aorta?",
+    options: [
+      "Foramen ovale",
+      "Ductus venosus",
+      "Ductus arteriosus",
+      "Sinus venosus",
+    ],
+    answer: "Ductus arteriosus",
+  },
+  {
+    question: "The circle of Willis is located at:",
+    options: [
+      "Apex of the lung",
+      "Base of the brain",
+      "Root of the heart",
+      "Spinal cord",
+    ],
+    answer: "Base of the brain",
+  },
+  {
+    question: "Autoregulation of cerebral blood flow ensures:",
+    options: [
+      "Constant flow despite changes in systemic BP",
+      "Maximum flow during systole",
+      "Blood diversion to muscles during exercise",
+      "Lowered intracranial pressure",
+    ],
+    answer: "Constant flow despite changes in systemic BP",
+  },
+  {
+    question:
+      "Which branch of the autonomic nervous system increases heart rate?",
+    options: ["Sympathetic", "Parasympathetic", "Somatic", "Enteric"],
+    answer: "Sympathetic",
+  },
+  {
+    question:
+      "Hypertension is defined clinically as a blood pressure consistently above:",
+    options: ["110/70 mmHg", "120/80 mmHg", "130/80 mmHg", "150/100 mmHg"],
+    answer: "130/80 mmHg",
+  },
+  {
+    question:
+      "Which vessels serve as the primary site for exchange of gases and nutrients?",
+    options: ["Arteries", "Veins", "Capillaries", "Arterioles"],
+    answer: "Capillaries",
+  },
+  {
+    question: "Which fetal shunt allows blood to bypass the liver?",
+    options: [
+      "Foramen ovale",
+      "Ductus arteriosus",
+      "Ductus venosus",
+      "Ligamentum arteriosum",
+    ],
+    answer: "Ductus venosus",
+  },
+  {
+    question:
+      "Which phase of the cardiac cycle is characterized by atrial contraction pushing blood into ventricles?",
+    options: [
+      "Ventricular systole",
+      "Atrial systole",
+      "Isovolumetric relaxation",
+      "Early diastole",
+    ],
+    answer: "Atrial systole",
+  },
+  {
+    question: "Which type of blood flow is most efficient in healthy vessels?",
+    options: ["Turbulent flow", "Laminar flow", "Spiral flow", "Reverse flow"],
+    answer: "Laminar flow",
+  },
+  {
+    question: "The SA node normally sets the pace of the heart at:",
+    options: ["20–40 bpm", "40–60 bpm", "60–100 bpm", "120–150 bpm"],
+    answer: "60–100 bpm",
+  },
+  {
+    question: "Which component of an ECG represents atrial depolarization?",
+    options: ["P wave", "QRS complex", "T wave", "PR interval"],
+    answer: "P wave",
+  },
+  {
+    question:
+      "Which ventricle generates higher pressure due to systemic circulation demands?",
+    options: ["Right ventricle", "Left ventricle", "Both equally", "Neither"],
+    answer: "Left ventricle",
+  },
+  {
+    question:
+      "Which hormone reduces blood pressure by causing vasodilation and sodium excretion?",
+    options: [
+      "Aldosterone",
+      "Angiotensin II",
+      "Atrial natriuretic peptide (ANP)",
+      "Cortisol",
+    ],
+    answer: "Atrial natriuretic peptide (ANP)",
+  },
+  {
+    question: "Which factor primarily determines blood viscosity?",
+    options: [
+      "Plasma proteins",
+      "Hematocrit",
+      "Capillary density",
+      "Stroke volume",
+    ],
+    answer: "Hematocrit",
+  },
 ];
 
 export const Quiz = () => {

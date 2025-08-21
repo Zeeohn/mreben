@@ -57,10 +57,10 @@ function Footer() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://wa.me/message/ACG6T4NMBL2EE1"
+                  href="https://wa.me/message/MBGBRWRUI4URG1"
                   className="text-green-600 underline"
                 >
-                  BeeN Cardiac Resource Center
+                  Babalola Ebenezer Omolafe
                 </a>
               </p>
             </div>
