@@ -56,16 +56,27 @@ export const Physiology = () => {
           "statement",
           "Statement of Objectives",
           <>
+            <p>By the end of this course, the student will be able to:</p>
             <p>
-              The objective of this study is to provide a comprehensive
-              exploration of the fundamental concepts and mechanisms underlying
-              cardiovascular biology. This includes a detailed examination of
-              the cardiovascular system&#39;s structure and function,
-              encompassing the intricate processes involved in the cardiac
-              cycle, hemodynamics, electrical activities of the heart, heart
-              rate, blood pressure, hypertension, coronary and pulmonary
-              circulation, fetal circulation, cerebral circulation, and the
-              integration of cardiovascular system functions.
+              i) describe the structure of the cardiovascular system;
+              <br />
+              ii) explain the function of the cardiovascular system;
+              <br />
+              iii) illustrate the processes involved in the cardiac cycle;
+              <br />
+              iv) analyse hemodynamics and blood flow dynamics;
+              <br />
+              v) interpret the electrical activities of the heart;
+              <br />
+              vi) measure and evaluate heart rate and blood pressure;
+              <br />
+              vii) explain the pathophysiology of hypertension;
+              <br />
+              viii) trace coronary and pulmonary circulation;
+              <br />
+              ix) compare fetal and cerebral circulation; and
+              <br />
+              x) integrate the functions of the cardiovascular system.
             </p>
             <div className="py-3 flex items-center justify-center">
               <img

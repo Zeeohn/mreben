@@ -56,25 +56,35 @@ export const Anatomy = () => {
             "statement",
             "Statement of Objectives",
             <>
+              <p>By the end of this course, the learner will be able to:</p>
               <p>
-                The objective of this study is to provide a comprehensive
-                exploration of cardiovascular anatomy, which includes the gross
-                anatomy of the mediastinum, the pericardium and pericardial
-                sinuses, the external and internal features of the heart and
-                great vessels, the surface anatomy of the heart and heart
-                valves, the blood supply to the heart, the azygos system and
-                lymphatic drainage of the heart, the autonomic nervous supply,
-                the microscopic anatomy of the heart, developmental anatomy,
-                congenital anomalies of the heart and vascular channels, and the
-                dissection of the thorax.
+                i) identify the gross anatomical structures of the mediastinum;
+                <br />
+                ii) illustrate the layers of the pericardium and locate the
+                pericardial sinuses;
+                <br />
+                iii) demonstrate the external and internal features of the heart
+                and great vessels;
+                <br />
+                iv) map the surface anatomy of the heart and heart valves;
+                <br />
+                v) analyse the blood supply of the heart;
+                <br />
+                vi) explain the azygos system and lymphatic drainage of the
+                heart;
+                <br />
+                vii) interpret the autonomic nervous supply of the heart;
+                <br />
+                viii) examine the microscopic anatomy of the heart;
+                <br />
+                ix) summarize the developmental anatomy of the heart;
+                <br />
+                x) evaluate congenital anomalies of the heart and vascular
+                channels; and
+                <br />
+                xi) perform a systematic dissection of the thorax to expose
+                thoracic and cardiac structures.
               </p>
-              <div className="py-3 flex items-center justify-center">
-                <img
-                  src="https://res.cloudinary.com/ddbtxfsfk/image/upload/f_auto,q_auto/i90lqhpycqwzn51jlzol"
-                  className="rounded-lg shadow-lg"
-                  alt="Heart Anatomy"
-                />
-              </div>
             </>
           )}
 
